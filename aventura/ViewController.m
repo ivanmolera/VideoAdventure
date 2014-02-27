@@ -25,13 +25,45 @@
     [self loadXML:@""];
 
     [self.view addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
+
+    // Botó show/hide masks
+    self.switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(20, 35, 200, 40)];
+    [self.switchBtn setOn:YES];
+    [self.switchBtn addTarget:self
+               action:@selector(showHideMasks)
+     forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:self.switchBtn];
 }
 
-- (void) update:(int)eventType andTouchPoints:(NSMutableArray*)touchPoints {
+- (void) showHideMasks {
+    Escena *currentEscena = self.m_aEscenes[self.m_iCurrentEscena];
+
+    for (id sublayer in currentEscena.layer.sublayers) {
+        
+        if ([sublayer isKindOfClass:[TouchMask class]]) {
+            if([sublayer isHidden]) {
+                [sublayer setHidden:NO];
+                [sublayer setOpacity:1];
+            }
+            else {
+                [sublayer setHidden:YES];
+                [sublayer setOpacity:0];
+            }
+        }
+    }
+    [self.view setNeedsDisplay];
+    [self.m_aEscenes[self.m_iCurrentEscena] removeFromSuperview];
+    [self.switchBtn removeFromSuperview];
+    [self.view addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
+    [self.view addSubview:self.switchBtn];
+}
+
+- (void) update:(int)eventType {
     
     Escena *currentEscena = self.m_aEscenes[self.m_iCurrentEscena];
     
-    CGPoint firstTouch = [[touchPoints objectAtIndex:0] CGPointValue];
+    CGPoint firstPoint  = [[self.beginTouchPoints objectAtIndex:0] CGPointValue];
+    //CGPoint secondPoint = [[self.endTouchPoints objectAtIndex:0] CGPointValue];
     
     for (id sublayer in currentEscena.layer.sublayers) {
         
@@ -39,7 +71,7 @@
             
             TouchMask *shapeLayer = sublayer;
             
-            if (CGPathContainsPoint(shapeLayer.path, 0, firstTouch, YES)) {
+            if (CGPathContainsPoint(shapeLayer.path, 0, firstPoint, YES)) {
                 NSLog(@"touchInLayer %@", shapeLayer.identifier);
                 
                 Estat *currentEstat = currentEscena.m_aEstats[currentEscena.m_iCurrentEstat];
@@ -61,14 +93,25 @@
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSMutableArray *touchPoints = [[NSMutableArray alloc] init];
+    self.beginTouchPoints = [[NSMutableArray alloc] init];
 
     for (UITouch *touch in touches) {
         CGPoint touchLocation = [touch locationInView:self.view];
-        [touchPoints addObject:[NSValue valueWithCGPoint:touchLocation]];
+        [self.beginTouchPoints addObject:[NSValue valueWithCGPoint:touchLocation]];
+        NSLog(@"%f,%f", touchLocation.x, touchLocation.y);
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    self.endTouchPoints = [[NSMutableArray alloc] init];
+    
+    for (UITouch *touch in touches) {
+        CGPoint touchLocation = [touch locationInView:self.view];
+        [self.endTouchPoints addObject:[NSValue valueWithCGPoint:touchLocation]];
+        NSLog(@"%f,%f", touchLocation.x, touchLocation.y);
     }
     
-    [self update:EventTypeTouch andTouchPoints:touchPoints];
+    [self update:EventTypeTouch];
 }
 
 - (void) loadXML:(NSString *)pathXML {
@@ -98,6 +141,8 @@
     [actions addObject:[self myAction6:escena]];
     [actions addObject:[self myAction7:escena]];
     [actions addObject:[self myAction8:escena]];
+    [actions addObject:[self myAction9:escena]];
+    [actions addObject:[self myAction10:escena]];
     
     [escena setM_aActions:actions];
 
@@ -122,7 +167,6 @@
     [self setM_aEscenes:escenes];
     self.m_iCurrentEscena = 0;
 }
-
 
 /////////////////// INICIALITZACIÓ ///////////////////
 
@@ -215,7 +259,8 @@
     estat.m_sVideoURL = @"AG_0003";
     [estat setM_aActions:[[NSMutableArray alloc] initWithObjects:
                           [self myAction1:escena],
-                          [self myAction2:escena], nil ]];
+                          [self myAction2:escena],
+                          [self myAction9:escena], nil ]];
     
     return estat;
 }
@@ -278,7 +323,8 @@
     estat.m_sVideoURL = @"AG_0006";
     [estat setM_aActions:[[NSMutableArray alloc] initWithObjects:
                           [self myAction7:escena],
-                          [self myAction8:escena], nil ]];
+                          [self myAction8:escena],
+                          [self myAction10:escena], nil ]];
     
     return estat;
 }
@@ -345,6 +391,21 @@
     
     NSMutableArray *masks = [[NSMutableArray alloc] init];
     [masks addObject:[self myMask4]];
+    
+    [action setM_aTouchMasks:masks];
+    
+    return action;
+}
+
+- (Action *)myAction10:(Escena*)escena {
+    Action *action = [[Action alloc] initWithIdentifier:@"10"];
+    
+    action.escena       = escena;
+    action.m_iType      = ActionTypeShowMessage;
+    action.message      = @"txt_msg_0002";
+    
+    NSMutableArray *masks = [[NSMutableArray alloc] init];
+    [masks addObject:[self myMask2]];
     
     [action setM_aTouchMasks:masks];
     

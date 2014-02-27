@@ -16,6 +16,13 @@ typedef enum {
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 
+// Show/Hide layers
+@property (nonatomic, strong) UISwitch          *switchBtn;
+
+// Touch points
+@property (nonatomic, strong) NSMutableArray    *beginTouchPoints;
+@property (nonatomic, strong) NSMutableArray    *endTouchPoints;
+
 // Array d'escenes
 @property (nonatomic, strong) NSMutableArray    *m_aEscenes;
 

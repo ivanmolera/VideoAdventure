@@ -38,13 +38,19 @@
 }
 
 - (void) doAction {
-    
+
+    // Esborro les etiquetes i imatges
+    for (UIView *i in self.escena.subviews) {
+        if ([i isKindOfClass:[UILabel class]] || [i isKindOfClass:[UIImageView class]]) {
+            [i removeFromSuperview];
+        }
+    }
+
     switch (self.m_iType) {
         case ActionTypeJumpToState:
-            if(self.escena.moviePlayer.playbackState != MPMoviePlaybackStatePlaying)
-            {
+            // Espero que acabi un video per reproduir-ne un altre?
+            //if(self.escena.moviePlayer.playbackState != MPMoviePlaybackStatePlaying)
                 [self.escena setCurrentEstat:[self.escena.m_aEstats objectAtIndex:self.target]];
-            }
             break;
             
         case ActionTypeJumpToScene:
@@ -53,6 +59,7 @@
         
         case ActionTypeShowMessage:
         {
+            /*
             CGRect myImageRect = CGRectMake(520, 150, 104, 32);
             
             UIImageView *boxImage = [[UIImageView alloc] initWithFrame:myImageRect];
@@ -60,14 +67,19 @@
             boxImage.opaque = YES;
 
             [self.escena addSubview:boxImage];
+            */
+            
+            CGRect myImageRect = CGRectMake(500, 20, 400, 60);
 
             UILabel *messageLabel = [[UILabel alloc] initWithFrame:myImageRect];
 
-            [messageLabel setTextColor:[UIColor blackColor]];
+            [messageLabel setTextColor:[UIColor whiteColor]];
             [messageLabel setBackgroundColor:[UIColor clearColor]];
-            [messageLabel setFont:[UIFont fontWithName: @"Laffayette Comic Pro" size: 13.0f]];
+            [messageLabel setFont:[UIFont fontWithName: @"Laffayette Comic Pro" size: 14.0f]];
             [messageLabel setText:NSLocalizedString(self.message, nil)];
             [messageLabel setTextAlignment:NSTextAlignmentCenter];
+            [messageLabel setLineBreakMode:NSLineBreakByWordWrapping];
+            [messageLabel setNumberOfLines:0];
 
             [self.escena addSubview:messageLabel];
         }
