@@ -43,6 +43,7 @@
         self.strokeColor = [UIColor redColor].CGColor;
         self.fillColor = [UIColor clearColor].CGColor;
         [self setOpacity:1];
+        [self setHidden:YES];
     }
     return self;
 }

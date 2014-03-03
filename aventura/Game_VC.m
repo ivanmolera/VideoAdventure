@@ -39,7 +39,7 @@
     
     // Botó show/hide masks
     self.switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(20, 35, 200, 40)];
-    [self.switchBtn setOn:YES];
+    [self.switchBtn setOn:NO];
     [self.switchBtn addTarget:self
                action:@selector(showHideMasks)
      forControlEvents:UIControlEventValueChanged];
