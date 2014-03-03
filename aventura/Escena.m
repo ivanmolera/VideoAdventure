@@ -19,19 +19,15 @@
     if (self) {
         // Initialization code
         self.identifier = identifier;
-
-        _moviePlayer =  [[MPMoviePlayerController alloc] init];
-
-        _moviePlayer.controlStyle   = MPMovieControlStyleNone;
-        _moviePlayer.scalingMode    = MPMovieScalingModeAspectFit;
-        _moviePlayer.shouldAutoplay = NO;
-        _moviePlayer.repeatMode     = MPMovieRepeatModeNone;
-        _moviePlayer.view.frame     = frame;
-        //_moviePlayer.view.backgroundColor = [UIColor blackColor];
-
-        [self addSubview:_moviePlayer.view];
-
-        _moviePlayer.fullscreen = YES;
+        
+        _moviePlayer = [[AVPlayer alloc] init];
+        _movieLayer = [AVPlayerLayer layer];
+        
+        [_movieLayer setPlayer:_moviePlayer];
+        [_movieLayer setFrame:frame];
+        [_movieLayer setBackgroundColor:[UIColor blackColor].CGColor];
+        
+        [self.layer addSublayer:_movieLayer];
     }
     return self;
 }
@@ -54,12 +50,12 @@
     NSString *path      = [bundle pathForResource:estat.m_sVideoURL ofType:@"mp4"];
     NSURL *movieUrl     = [NSURL fileURLWithPath:path];
 
-    [_moviePlayer setContentURL:movieUrl];
-
-    // MPMovieRepeatModeNone, MPMovieRepeatModeOne
-    _moviePlayer.repeatMode = MPMovieRepeatModeNone;
-
-    [_moviePlayer prepareToPlay];
+    AVURLAsset *movieOneItemAsset = [AVURLAsset URLAssetWithURL:movieUrl options:nil];
+    AVPlayerItem *movieItem = [AVPlayerItem playerItemWithAsset:movieOneItemAsset];
+    
+    [_moviePlayer replaceCurrentItemWithPlayerItem:movieItem];
+    
+    [_movieLayer setPlayer:_moviePlayer];
     [_moviePlayer play];
 }
 

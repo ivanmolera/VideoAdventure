@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 #import "Estat.h"
 
 @interface Escena : UIView
@@ -25,7 +26,8 @@
 @property (nonatomic, strong) NSMutableArray            *m_aEstats;
 
 // Player
-@property (nonatomic, strong) MPMoviePlayerController   *moviePlayer;
+@property (nonatomic, strong) AVPlayer                  *moviePlayer;
+@property (nonatomic, strong) AVPlayerLayer             *movieLayer;
 
 // Estat actual
 @property (nonatomic, assign) int                       m_iCurrentEstat;
