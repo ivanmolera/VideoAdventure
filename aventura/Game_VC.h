@@ -6,15 +6,28 @@
 //  Copyright (c) 2014 owlab. All rights reserved.
 //
 
+//---Imports:----------------
 #import <UIKit/UIKit.h>
+//---------------------------
 
+
+//------Define New Types:----
 typedef enum {
     EventTypeTouch,
     EventTypeMultiTouch,
     EventTypeDrag
 } AGEventType;
+//---------------------------
 
-@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
+
+@interface Game_VC : UIViewController <UIGestureRecognizerDelegate>
+{
+    
+}
+
+//----Properties:
+
+@property (nonatomic, strong) UIButton          *btn_Back;
 
 // Show/Hide layers
 @property (nonatomic, strong) UISwitch          *switchBtn;
@@ -30,6 +43,8 @@ typedef enum {
 @property (nonatomic, assign) int               m_iCurrentEscena;
 
 
+
+//----Functions:
 - (void) loadXML:(NSString*)pathXML;
 
 @end

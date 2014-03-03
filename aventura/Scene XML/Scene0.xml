@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Escena id="0">
+    <TouchMasks>
+        <TouchMask id="1">
+            <Coords>
+                <Coord step="0"     posX="522"  posY="602"/>
+                <Coord step="1"     posX="517"  posY="607"/>
+                <Coord step="2"     posX="496"  posY="638"/>
+                <Coord step="3"     posX="549"  posY="656"/>
+                <Coord step="4"     posX="585"  posY="647"/>
+                <Coord step="5"     posX="605"  posY="637"/>
+                <Coord step="6"     posX="603"  posY="605"/>
+                <Coord step="7"     posX="572"  posY="593"/>
+            </Coords>
+        </TouchMask>
+        
+        <TouchMask id="2">
+            <Coords>
+                <Coord step="0"     posX="567"  posY="514"/>
+                <Coord step="1"     posX="597"  posY="509"/>
+                <Coord step="2"     posX="625"  posY="514"/>
+                <Coord step="3"     posX="630"  posY="564"/>
+                <Coord step="4"     posX="604"  posY="602"/>
+                <Coord step="5"     posX="623"  posY="665"/>
+                <Coord step="6"     posX="596"  posY="674"/>
+                <Coord step="7"     posX="564"  posY="662"/>
+                <Coord step="8"     posX="592"  posY="601"/>
+                <Coord step="9"     posX="570"  posY="586"/>
+                <Coord step="10"    posX="560"  posY="553"/>
+            </Coords>
+        </TouchMask>
+        
+        <TouchMask id="3">
+            <Coords>
+                <Coord step="0"     posX="809"  posY="603"/>
+                <Coord step="1"     posX="838"  posY="616"/>
+                <Coord step="2"     posX="809"  posY="603"/>
+                <Coord step="3"     posX="838"  posY="616"/>
+                <Coord step="4"     posX="858"  posY="635"/>
+                <Coord step="5"     posX="880"  posY="616"/>
+                <Coord step="6"     posX="884"  posY="501"/>
+                <Coord step="7"     posX="902"  posY="479"/>
+                <Coord step="8"     posX="906"  posY="409"/>
+                <Coord step="9"     posX="929"  posY="407"/>
+                <Coord step="10"    posX="930"  posY="476"/>
+                <Coord step="11"    posX="947"  posY="499"/>
+                <Coord step="12"    posX="939"  posY="651"/>
+                <Coord step="13"    posX="934"  posY="667"/>
+                <Coord step="14"    posX="914"  posY="673"/>
+                <Coord step="15"    posX="883"  posY="667"/>
+                <Coord step="16"    posX="847"  posY="670"/>
+                <Coord step="17"    posX="805"  posY="675"/>
+                <Coord step="18"    posX="774"  posY="659"/>
+                <Coord step="19"    posX="769"  posY="645"/>
+            </Coords>
+        </TouchMask>
+        
+        <TouchMask id="4">
+            <Coords>
+                <Coord step="0"     posX="650"  posY="180"/>
+                <Coord step="1"     posX="800"  posY="180"/>
+                <Coord step="2"     posX="800"  posY="350"/>
+                <Coord step="3"     posX="650"  posY="350"/>
+            </Coords>
+        </TouchMask>
+    </TouchMasks>
+    
+    <Actions>
+        <Action id="1" type="jumpToState" target="0">
+            <TouchMask id="1"/>
+        </Action>
+        
+        <Action id="2" type="jumpToState" target="1">
+            <TouchMask id="3"/>
+        </Action>
+        
+        <Action id="3" type="jumpToState" target="2">
+            <TouchMask id="3"/>
+        </Action>
+        
+        <Action id="4" type="jumpToState" target="3">
+            <TouchMask id="2"/>
+        </Action>
+        
+        <Action id="5" type="jumpToState" target="4">
+            <TouchMask id="2"/>
+        </Action>
+        
+        <Action id="6" type="jumpToState" target="5">
+            <TouchMask id="3"/>
+        </Action>
+        
+        <Action id="7" type="jumpToState" target="6">
+            <TouchMask id="2"/>
+        </Action>
+        
+        <Action id="8" type="jumpToState" target="7">
+            <TouchMask id="3"/>
+        </Action>
+        
+        <Action id="9" type="showMessage" message="txt_msg_0001">
+            <TouchMask id="4"/>
+        </Action>
+    </Actions>
+    
+    
+	<Estats>
+        <Estat id="0" videoURL="AG_0001">
+            <Action id="1"/>
+            <Action id="2"/>
+            <Action id="9"/>
+        </Estat>
+        
+		<Estat id="1" videoURL="AG_0002">
+			<Action id="3"/>
+            <Action id="4"/>
+		</Estat>
+		
+        <Estat id="2" videoURL="AG_0003">
+            <Action id="1"/>
+            <Action id="2"/>
+            <Action id="9"/>
+        </Estat>
+        
+		<Estat id="3" videoURL="AG_0004">
+			<Action id="5"/>
+            <Action id="6"/>
+		</Estat>
+        
+		<Estat id="4" videoURL="AG_0005">
+			<Action id="3"/>
+            <Action id="4"/>
+		</Estat>
+		
+        <Estat id="5" videoURL="AG_0006">
+			<Action id="7"/>
+            <Action id="8"/>
+		</Estat>
+		
+        <Estat id="6" videoURL="AG_0007">
+			<Action id="7"/>
+            <Action id="8"/>
+		</Estat>
+		
+        <Estat id="7" videoURL="AG_0008">
+			<Action id="1"/>
+            <Action id="2"/>
+            <Action id="9"/>
+		</Estat>
+	</Estats>
+    
+</Escena>

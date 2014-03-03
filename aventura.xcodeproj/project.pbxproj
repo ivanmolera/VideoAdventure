@@ -14,7 +14,7 @@
 		03722BC918AAC73300B2EEBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03722BC818AAC73300B2EEBC /* main.m */; };
 		03722BCD18AAC73300B2EEBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03722BCC18AAC73300B2EEBC /* AppDelegate.m */; };
 		03722BD018AAC73300B2EEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03722BCE18AAC73300B2EEBC /* Main.storyboard */; };
-		03722BD318AAC73300B2EEBC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03722BD218AAC73300B2EEBC /* ViewController.m */; };
+		03722BD318AAC73300B2EEBC /* Game_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 03722BD218AAC73300B2EEBC /* Game_VC.m */; };
 		03722BD518AAC73300B2EEBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03722BD418AAC73300B2EEBC /* Images.xcassets */; };
 		03722BDC18AAC73300B2EEBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03722BDB18AAC73300B2EEBC /* XCTest.framework */; };
 		03722BDD18AAC73300B2EEBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03722BBC18AAC73300B2EEBC /* Foundation.framework */; };
@@ -37,6 +37,11 @@
 		03DAA8BF18BD364C00A2A19A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DAA8C118BD364C00A2A19A /* Localizable.strings */; };
 		03DAA8C618BD3B6100A2A19A /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DAA8C518BD3B6100A2A19A /* box.png */; };
 		03E3CF3E18BA0F7000B9D789 /* Estat.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E3CF3D18BA0F7000B9D789 /* Estat.m */; };
+		C73BC12818C499FF00C46E86 /* EditorTouchMask_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = C73BC12718C499FF00C46E86 /* EditorTouchMask_VC.m */; };
+		C73BC12E18C4BC1100C46E86 /* XMLTreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C73BC12C18C4BC1100C46E86 /* XMLTreeNode.cpp */; };
+		C73BC13118C4C2D900C46E86 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BC13018C4C2D900C46E86 /* libxml2.dylib */; };
+		C73BC13318C4CAF100C46E86 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BC13218C4CAF100C46E86 /* QuartzCore.framework */; };
+		C7F6088018C4F60500E03078 /* Scene0.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7F6087F18C4F60500E03078 /* Scene0.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +63,11 @@
 		03722BC618AAC73300B2EEBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		03722BC818AAC73300B2EEBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		03722BCA18AAC73300B2EEBC /* Aventura-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aventura-Prefix.pch"; sourceTree = "<group>"; };
-		03722BCB18AAC73300B2EEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		03722BCC18AAC73300B2EEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		03722BCB18AAC73300B2EEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Aventura/AppDelegate.h; sourceTree = "<group>"; };
+		03722BCC18AAC73300B2EEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Aventura/AppDelegate.m; sourceTree = "<group>"; };
 		03722BCF18AAC73300B2EEBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		03722BD118AAC73300B2EEBC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		03722BD218AAC73300B2EEBC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		03722BD118AAC73300B2EEBC /* Game_VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game_VC.h; sourceTree = "<group>"; };
+		03722BD218AAC73300B2EEBC /* Game_VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game_VC.m; sourceTree = "<group>"; };
 		03722BD418AAC73300B2EEBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		03722BDA18AAC73300B2EEBC /* AventuraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AventuraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03722BDB18AAC73300B2EEBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -85,13 +90,20 @@
 		037E8DA018AD7FB00009DAB5 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
 		037E8DA118AD7FB00009DAB5 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
 		03DAA8BB18BD11A600A2A19A /* Laffayette_Comic_Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Laffayette_Comic_Pro.ttf; sourceTree = "<group>"; };
-		03DAA8C018BD364C00A2A19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		03DAA8C218BD365200A2A19A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		03DAA8C318BD369400A2A19A /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		03DAA8C418BD369F00A2A19A /* ca */ = {isa = PBXFileReference; lastKnownFileType = file; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		03DAA8C018BD364C00A2A19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		03DAA8C218BD365200A2A19A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		03DAA8C318BD369400A2A19A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		03DAA8C418BD369F00A2A19A /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		03DAA8C518BD3B6100A2A19A /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		03E3CF3C18BA0F7000B9D789 /* Estat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Estat.h; path = aventura/Estat.h; sourceTree = SOURCE_ROOT; };
 		03E3CF3D18BA0F7000B9D789 /* Estat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Estat.m; path = aventura/Estat.m; sourceTree = SOURCE_ROOT; };
+		C73BC12618C499FF00C46E86 /* EditorTouchMask_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorTouchMask_VC.h; path = aventura/EditorTouchMask_VC.h; sourceTree = SOURCE_ROOT; };
+		C73BC12718C499FF00C46E86 /* EditorTouchMask_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorTouchMask_VC.m; path = aventura/EditorTouchMask_VC.m; sourceTree = SOURCE_ROOT; };
+		C73BC12C18C4BC1100C46E86 /* XMLTreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XMLTreeNode.cpp; path = aventura/XMLTreeNode.cpp; sourceTree = SOURCE_ROOT; };
+		C73BC12D18C4BC1100C46E86 /* XMLTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLTreeNode.h; path = aventura/XMLTreeNode.h; sourceTree = SOURCE_ROOT; };
+		C73BC13018C4C2D900C46E86 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		C73BC13218C4CAF100C46E86 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C7F6087F18C4F60500E03078 /* Scene0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scene0.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73BC13318C4CAF100C46E86 /* QuartzCore.framework in Frameworks */,
+				C73BC13118C4C2D900C46E86 /* libxml2.dylib in Frameworks */,
 				03722BF218AAC74B00B2EEBC /* MediaPlayer.framework in Frameworks */,
 				03722BBF18AAC73300B2EEBC /* CoreGraphics.framework in Frameworks */,
 				03722BC118AAC73300B2EEBC /* UIKit.framework in Frameworks */,
@@ -122,7 +136,9 @@
 		03722BB018AAC73300B2EEBC = {
 			isa = PBXGroup;
 			children = (
-				03DAA8C118BD364C00A2A19A /* Localizable.strings */,
+				03722BCE18AAC73300B2EEBC /* Main.storyboard */,
+				03722BCB18AAC73300B2EEBC /* AppDelegate.h */,
+				03722BCC18AAC73300B2EEBC /* AppDelegate.m */,
 				03722BC218AAC73300B2EEBC /* Aventura */,
 				03722BE118AAC73300B2EEBC /* AventuraTests */,
 				03722BBB18AAC73300B2EEBC /* Frameworks */,
@@ -142,6 +158,8 @@
 		03722BBB18AAC73300B2EEBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C73BC13218C4CAF100C46E86 /* QuartzCore.framework */,
+				C73BC13018C4C2D900C46E86 /* libxml2.dylib */,
 				03722BF118AAC74B00B2EEBC /* MediaPlayer.framework */,
 				03722BBC18AAC73300B2EEBC /* Foundation.framework */,
 				03722BBE18AAC73300B2EEBC /* CoreGraphics.framework */,
@@ -154,37 +172,25 @@
 		03722BC218AAC73300B2EEBC /* Aventura */ = {
 			isa = PBXGroup;
 			children = (
-				03E3CF3F18BA0F8200B9D789 /* Classes */,
-				03722BCB18AAC73300B2EEBC /* AppDelegate.h */,
-				03722BCC18AAC73300B2EEBC /* AppDelegate.m */,
-				03722BCE18AAC73300B2EEBC /* Main.storyboard */,
-				03722BD118AAC73300B2EEBC /* ViewController.h */,
-				03722BD218AAC73300B2EEBC /* ViewController.m */,
+				C73BC12118C4966B00C46E86 /* 01. View Controllers */,
+				03E3CF3F18BA0F8200B9D789 /* 02. Classes */,
+				C73BC12B18C4BB7000C46E86 /* 03. Utils */,
+				C73BC12218C4970C00C46E86 /* 03. Resources */,
+				03722BC318AAC73300B2EEBC /* 04. Supporting Files */,
 				03722BD418AAC73300B2EEBC /* Images.xcassets */,
-				03722BC318AAC73300B2EEBC /* Supporting Files */,
 			);
 			path = Aventura;
 			sourceTree = "<group>";
 		};
-		03722BC318AAC73300B2EEBC /* Supporting Files */ = {
+		03722BC318AAC73300B2EEBC /* 04. Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				03DAA8C518BD3B6100A2A19A /* box.png */,
-				03DAA8BB18BD11A600A2A19A /* Laffayette_Comic_Pro.ttf */,
-				03722BF618AACEA900B2EEBC /* AG_0001.mp4 */,
-				03722BF718AACEA900B2EEBC /* AG_0002.mp4 */,
-				03722BF818AACEA900B2EEBC /* AG_0003.mp4 */,
-				03722BF918AACEA900B2EEBC /* AG_0004.mp4 */,
-				03722BFA18AACEA900B2EEBC /* AG_0005.mp4 */,
-				03722BFB18AACEA900B2EEBC /* AG_0006.mp4 */,
-				03722BFC18AACEA900B2EEBC /* AG_0007.mp4 */,
-				03722BFD18AACEA900B2EEBC /* AG_0008.mp4 */,
 				03722BC418AAC73300B2EEBC /* Aventura-Info.plist */,
 				03722BC518AAC73300B2EEBC /* InfoPlist.strings */,
 				03722BC818AAC73300B2EEBC /* main.m */,
 				03722BCA18AAC73300B2EEBC /* Aventura-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			name = "04. Supporting Files";
 			sourceTree = "<group>";
 		};
 		03722BE118AAC73300B2EEBC /* AventuraTests */ = {
@@ -205,7 +211,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		03E3CF3F18BA0F8200B9D789 /* Classes */ = {
+		03E3CF3F18BA0F8200B9D789 /* 02. Classes */ = {
 			isa = PBXGroup;
 			children = (
 				03722BF318AAC78500B2EEBC /* Escena.h */,
@@ -217,8 +223,88 @@
 				03E3CF3C18BA0F7000B9D789 /* Estat.h */,
 				03E3CF3D18BA0F7000B9D789 /* Estat.m */,
 			);
-			name = Classes;
+			name = "02. Classes";
 			sourceTree = "<group>";
+		};
+		C73BC12118C4966B00C46E86 /* 01. View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				03722BD118AAC73300B2EEBC /* Game_VC.h */,
+				03722BD218AAC73300B2EEBC /* Game_VC.m */,
+				C73BC12618C499FF00C46E86 /* EditorTouchMask_VC.h */,
+				C73BC12718C499FF00C46E86 /* EditorTouchMask_VC.m */,
+			);
+			name = "01. View Controllers";
+			sourceTree = "<group>";
+		};
+		C73BC12218C4970C00C46E86 /* 03. Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03DAA8C118BD364C00A2A19A /* Localizable.strings */,
+				C7F6087E18C4F60500E03078 /* Scene XML */,
+				C73BC12518C4974200C46E86 /* Videos */,
+				C73BC12418C4973D00C46E86 /* Fonts */,
+				C73BC12318C4972B00C46E86 /* Images */,
+			);
+			name = "03. Resources";
+			sourceTree = "<group>";
+		};
+		C73BC12318C4972B00C46E86 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				03DAA8C518BD3B6100A2A19A /* box.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C73BC12418C4973D00C46E86 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				03DAA8BB18BD11A600A2A19A /* Laffayette_Comic_Pro.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		C73BC12518C4974200C46E86 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				03722BF618AACEA900B2EEBC /* AG_0001.mp4 */,
+				03722BF718AACEA900B2EEBC /* AG_0002.mp4 */,
+				03722BF818AACEA900B2EEBC /* AG_0003.mp4 */,
+				03722BF918AACEA900B2EEBC /* AG_0004.mp4 */,
+				03722BFA18AACEA900B2EEBC /* AG_0005.mp4 */,
+				03722BFB18AACEA900B2EEBC /* AG_0006.mp4 */,
+				03722BFC18AACEA900B2EEBC /* AG_0007.mp4 */,
+				03722BFD18AACEA900B2EEBC /* AG_0008.mp4 */,
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		C73BC12B18C4BB7000C46E86 /* 03. Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C73BC12F18C4C28400C46E86 /* XML Parser */,
+			);
+			name = "03. Utils";
+			sourceTree = "<group>";
+		};
+		C73BC12F18C4C28400C46E86 /* XML Parser */ = {
+			isa = PBXGroup;
+			children = (
+				C73BC12C18C4BC1100C46E86 /* XMLTreeNode.cpp */,
+				C73BC12D18C4BC1100C46E86 /* XMLTreeNode.h */,
+			);
+			name = "XML Parser";
+			sourceTree = "<group>";
+		};
+		C7F6087E18C4F60500E03078 /* Scene XML */ = {
+			isa = PBXGroup;
+			children = (
+				C7F6087F18C4F60500E03078 /* Scene0.xml */,
+			);
+			name = "Scene XML";
+			path = "aventura/Scene XML";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -304,6 +390,7 @@
 				03722C0018AACEBA00B2EEBC /* AG_0003.mp4 in Resources */,
 				03722C0118AACEBA00B2EEBC /* AG_0004.mp4 in Resources */,
 				03DAA8C618BD3B6100A2A19A /* box.png in Resources */,
+				C7F6088018C4F60500E03078 /* Scene0.xml in Resources */,
 				03722C0218AACEBA00B2EEBC /* AG_0005.mp4 in Resources */,
 				03722C0318AACEBA00B2EEBC /* AG_0006.mp4 in Resources */,
 				03722C0418AACEBA00B2EEBC /* AG_0007.mp4 in Resources */,
@@ -330,12 +417,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03722BD318AAC73300B2EEBC /* ViewController.m in Sources */,
+				03722BD318AAC73300B2EEBC /* Game_VC.m in Sources */,
 				037E8D9F18AC8A3E0009DAB5 /* TouchMask.m in Sources */,
 				03722BF518AAC78500B2EEBC /* Escena.m in Sources */,
 				03E3CF3E18BA0F7000B9D789 /* Estat.m in Sources */,
 				037E8DA218AD7FB00009DAB5 /* Action.m in Sources */,
+				C73BC12818C499FF00C46E86 /* EditorTouchMask_VC.m in Sources */,
 				03722BCD18AAC73300B2EEBC /* AppDelegate.m in Sources */,
+				C73BC12E18C4BC1100C46E86 /* XMLTreeNode.cpp in Sources */,
 				03722BC918AAC73300B2EEBC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +462,7 @@
 				03722BCF18AAC73300B2EEBC /* Base */,
 			);
 			name = Main.storyboard;
+			path = Aventura;
 			sourceTree = "<group>";
 		};
 		03722BE418AAC73300B2EEBC /* InfoPlist.strings */ = {
@@ -392,6 +482,7 @@
 				03DAA8C418BD369F00A2A19A /* ca */,
 			);
 			name = Localizable.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -476,8 +567,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aventura/Aventura-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "Aventura/Aventura-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -489,8 +587,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_SECURITY_KEYCHAIN_API = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aventura/Aventura-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				INFOPLIST_FILE = "Aventura/Aventura-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
