@@ -47,9 +47,9 @@
     [self.view addSubview:self.switchBtn];
     
     // Inventari
-    Inventory *inv = [[Inventory alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:inv];
-    [self.view bringSubviewToFront:inv];
+    self.inventory = [[Inventory alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.inventory];
+    [self.view bringSubviewToFront:self.inventory];
 }
 
 - (void) showHideMasks {
@@ -75,6 +75,8 @@
     [self.view addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
     [self.view addSubview:self.switchBtn];
     [self.view addSubview:_btn_Back];
+    [self.view addSubview:self.inventory];
+    [self.view bringSubviewToFront:self.inventory];
 }
 
 - (void) update:(int)eventType {

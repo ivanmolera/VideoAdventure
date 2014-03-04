@@ -8,6 +8,7 @@
 
 //---Imports:----------------
 #import <UIKit/UIKit.h>
+#import "Inventory.h"
 //---------------------------
 
 
@@ -31,6 +32,9 @@ typedef enum {
 
 // Show/Hide layers
 @property (nonatomic, strong) UISwitch          *switchBtn;
+
+// Inventari
+@property (nonatomic, strong) Inventory         *inventory;
 
 // Touch points
 @property (nonatomic, strong) NSMutableArray    *beginTouchPoints;
