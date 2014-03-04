@@ -12,6 +12,7 @@
 #import "TouchMask.h"
 #import "Action.h"
 #import "XMLTreeNode.h"
+#import "Inventory.h"
 //-----------------------
 
 @interface Game_VC ()
@@ -31,19 +32,24 @@
     [self.view addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
 
     //Botó Back:
-    _btn_Back = [[UIButton alloc] initWithFrame:CGRectMake(100,25,100,50)];
+    _btn_Back = [[UIButton alloc] initWithFrame:CGRectMake(20,25,100,50)];
     [_btn_Back setTitle:@"Back" forState:UIControlStateNormal];
     _btn_Back.titleLabel.font = [UIFont systemFontOfSize:30];
     [_btn_Back addTarget:self action:@selector(back_Pressed:) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:_btn_Back];
     
     // Botó show/hide masks
-    self.switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(20, 35, 200, 40)];
+    self.switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(self.view.frame.size.height-80, 35, 100, 40)];
     [self.switchBtn setOn:NO];
     [self.switchBtn addTarget:self
                action:@selector(showHideMasks)
      forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.switchBtn];
+    
+    // Inventari
+    Inventory *inv = [[Inventory alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:inv];
+    [self.view bringSubviewToFront:inv];
 }
 
 - (void) showHideMasks {

@@ -33,10 +33,13 @@
 		037E8D9F18AC8A3E0009DAB5 /* TouchMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 037E8D9E18AC8A3E0009DAB5 /* TouchMask.m */; };
 		037E8DA218AD7FB00009DAB5 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 037E8DA118AD7FB00009DAB5 /* Action.m */; };
 		03C9262F18C5291800612E83 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C9262D18C5235000612E83 /* AVFoundation.framework */; };
+		03C9263218C66D3500612E83 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C9263118C66D3500612E83 /* Inventory.m */; };
 		03DAA8BC18BD14A100A2A19A /* Laffayette_Comic_Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03DAA8BB18BD11A600A2A19A /* Laffayette_Comic_Pro.ttf */; };
 		03DAA8BF18BD364C00A2A19A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03DAA8C118BD364C00A2A19A /* Localizable.strings */; };
 		03DAA8C618BD3B6100A2A19A /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = 03DAA8C518BD3B6100A2A19A /* box.png */; };
 		03E3CF3E18BA0F7000B9D789 /* Estat.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E3CF3D18BA0F7000B9D789 /* Estat.m */; };
+		03F3DC7C18C680BB00DB679A /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F3DC7A18C680BB00DB679A /* arrow_left.png */; };
+		03F3DC7D18C680BB00DB679A /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F3DC7B18C680BB00DB679A /* arrow_right.png */; };
 		C73BC12818C499FF00C46E86 /* EditorTouchMask_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = C73BC12718C499FF00C46E86 /* EditorTouchMask_VC.m */; };
 		C73BC12E18C4BC1100C46E86 /* XMLTreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C73BC12C18C4BC1100C46E86 /* XMLTreeNode.cpp */; };
 		C73BC13118C4C2D900C46E86 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BC13018C4C2D900C46E86 /* libxml2.dylib */; };
@@ -90,6 +93,8 @@
 		037E8DA018AD7FB00009DAB5 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
 		037E8DA118AD7FB00009DAB5 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
 		03C9262D18C5235000612E83 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		03C9263018C66D3500612E83 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Inventory.h; path = aventura/Inventory.h; sourceTree = SOURCE_ROOT; };
+		03C9263118C66D3500612E83 /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Inventory.m; path = aventura/Inventory.m; sourceTree = SOURCE_ROOT; };
 		03DAA8BB18BD11A600A2A19A /* Laffayette_Comic_Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Laffayette_Comic_Pro.ttf; sourceTree = "<group>"; };
 		03DAA8C018BD364C00A2A19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		03DAA8C218BD365200A2A19A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -98,6 +103,8 @@
 		03DAA8C518BD3B6100A2A19A /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		03E3CF3C18BA0F7000B9D789 /* Estat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Estat.h; path = aventura/Estat.h; sourceTree = SOURCE_ROOT; };
 		03E3CF3D18BA0F7000B9D789 /* Estat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Estat.m; path = aventura/Estat.m; sourceTree = SOURCE_ROOT; };
+		03F3DC7A18C680BB00DB679A /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		03F3DC7B18C680BB00DB679A /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		C73BC12618C499FF00C46E86 /* EditorTouchMask_VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorTouchMask_VC.h; path = aventura/EditorTouchMask_VC.h; sourceTree = SOURCE_ROOT; };
 		C73BC12718C499FF00C46E86 /* EditorTouchMask_VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorTouchMask_VC.m; path = aventura/EditorTouchMask_VC.m; sourceTree = SOURCE_ROOT; };
 		C73BC12C18C4BC1100C46E86 /* XMLTreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XMLTreeNode.cpp; path = aventura/XMLTreeNode.cpp; sourceTree = SOURCE_ROOT; };
@@ -224,6 +231,8 @@
 				037E8DA118AD7FB00009DAB5 /* Action.m */,
 				03E3CF3C18BA0F7000B9D789 /* Estat.h */,
 				03E3CF3D18BA0F7000B9D789 /* Estat.m */,
+				03C9263018C66D3500612E83 /* Inventory.h */,
+				03C9263118C66D3500612E83 /* Inventory.m */,
 			);
 			name = "02. Classes";
 			sourceTree = "<group>";
@@ -254,6 +263,8 @@
 		C73BC12318C4972B00C46E86 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				03F3DC7A18C680BB00DB679A /* arrow_left.png */,
+				03F3DC7B18C680BB00DB679A /* arrow_right.png */,
 				03DAA8C518BD3B6100A2A19A /* box.png */,
 			);
 			name = Images;
@@ -391,7 +402,9 @@
 				03722BFF18AACEBA00B2EEBC /* AG_0002.mp4 in Resources */,
 				03722C0018AACEBA00B2EEBC /* AG_0003.mp4 in Resources */,
 				03722C0118AACEBA00B2EEBC /* AG_0004.mp4 in Resources */,
+				03F3DC7D18C680BB00DB679A /* arrow_right.png in Resources */,
 				03DAA8C618BD3B6100A2A19A /* box.png in Resources */,
+				03F3DC7C18C680BB00DB679A /* arrow_left.png in Resources */,
 				C7F6088018C4F60500E03078 /* Scene0.xml in Resources */,
 				03722C0218AACEBA00B2EEBC /* AG_0005.mp4 in Resources */,
 				03722C0318AACEBA00B2EEBC /* AG_0006.mp4 in Resources */,
@@ -423,6 +436,7 @@
 				037E8D9F18AC8A3E0009DAB5 /* TouchMask.m in Sources */,
 				03722BF518AAC78500B2EEBC /* Escena.m in Sources */,
 				03E3CF3E18BA0F7000B9D789 /* Estat.m in Sources */,
+				03C9263218C66D3500612E83 /* Inventory.m in Sources */,
 				037E8DA218AD7FB00009DAB5 /* Action.m in Sources */,
 				C73BC12818C499FF00C46E86 /* EditorTouchMask_VC.m in Sources */,
 				03722BCD18AAC73300B2EEBC /* AppDelegate.m in Sources */,
