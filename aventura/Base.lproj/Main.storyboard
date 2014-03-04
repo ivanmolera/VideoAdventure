@@ -12,26 +12,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UgM-pc-ufg">
-                                <rect key="frame" x="9" y="26" width="102" height="30"/>
+                            <view contentMode="scaleToFill" id="7Wb-jL-wh4" userLabel="OptionsMenu">
+                                <rect key="frame" x="0.0" y="373" width="200" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="BACK">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back_Pressed:" destination="fzF-SQ-jdi" eventType="touchUpInside" id="iIb-wf-xry"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="HJT-2A-XaH">
+                                        <rect key="frame" x="0.0" y="5" width="195" height="374"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DVe-fA-pOL">
+                                                <rect key="frame" x="33" y="99" width="129" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.8025490419708029" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="New MaskTouch">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="newMask_Pressed:" destination="fzF-SQ-jdi" eventType="touchUpInside" id="cJP-Vk-FeO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wKE-qs-Stu">
+                                                <rect key="frame" x="33" y="169" width="129" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.80254904199999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Edit MaskTouch">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="editMask_Pressed:" destination="fzF-SQ-jdi" eventType="touchUpInside" id="Nrd-4Q-orz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pOn-ce-e8F">
+                                                <rect key="frame" x="33" y="239" width="129" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.80254904199999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Send XML">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendXML_Pressed:" destination="fzF-SQ-jdi" eventType="touchUpInside" id="FX2-Sb-uDC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ViY-a2-JDs">
+                                                <rect key="frame" x="33" y="312" width="129" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.80254904199999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="back_Pressed:" destination="fzF-SQ-jdi" eventType="touchUpInside" id="uSI-ip-C5F"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RwK-d5-8h9">
+                                                <rect key="frame" x="10" y="13" width="174" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="Yzy-lP-BsN">
+                                                <rect key="frame" x="0.0" y="53" width="195" height="2"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94477075729927007" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wx1-Kv-bNO" appends="YES" id="K3S-dX-Cna"/>
+                            <outletCollection property="gestureRecognizers" destination="PJS-XA-P10" appends="YES" id="UiR-ks-nYj"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="yts-8H-UV0"/>
                     <connections>
-                        <outlet property="btn_Back" destination="UgM-pc-ufg" id="ekO-AQ-ei2"/>
+                        <outlet property="btn_Back" destination="ViY-a2-JDs" id="OZs-6o-8MP"/>
+                        <outlet property="btn_EditMask" destination="wKE-qs-Stu" id="SRz-Cc-IiS"/>
+                        <outlet property="btn_NewMask" destination="DVe-fA-pOL" id="W9O-4d-2pN"/>
+                        <outlet property="btn_SendXML" destination="pOn-ce-e8F" id="r9Q-DO-4oy"/>
+                        <outlet property="lbl_OptionsMenu" destination="RwK-d5-8h9" id="dNi-il-zrr"/>
+                        <outlet property="view_Menu" destination="7Wb-jL-wh4" id="c3Z-pa-ffA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3G-dP-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="wx1-Kv-bNO" userLabel="ShowMenu_SwipeGesture">
+                    <connections>
+                        <action selector="swipe_ShowMenu:" destination="fzF-SQ-jdi" id="MaD-V3-JWi"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="PJS-XA-P10" userLabel="HideMenu_SwipeGesture">
+                    <connections>
+                        <action selector="swipe_HideMenu:" destination="fzF-SQ-jdi" id="nsg-Km-Dw9"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1680" y="-702"/>
         </scene>
