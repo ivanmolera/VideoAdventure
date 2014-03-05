@@ -60,7 +60,7 @@
     NSLog(@"%f = %f, %f = %f", previousLocation.x, location.x, previousLocation.y, location.y);
 
     // touch mostro descripció
-    if(previousLocation.x == location.x && previousLocation.y == location.y) {
+    if(abs(round(previousLocation.x - location.x)) <= 8 && abs(round(previousLocation.y - location.y)) <= 8) {
         [self showDescription];
     }
     else {
