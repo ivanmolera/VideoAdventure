@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0348ECB218C7A62C00C69934 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECB118C7A62C00C69934 /* Inventory.m */; };
+		0348ECDD18C7CB7E00C69934 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECDC18C7CB7E00C69934 /* Item.m */; };
+		0348ECE118C7CDC800C69934 /* item0001.png in Resources */ = {isa = PBXBuildFile; fileRef = 0348ECDE18C7CDC800C69934 /* item0001.png */; };
+		0348ECE218C7CDC800C69934 /* item0002.png in Resources */ = {isa = PBXBuildFile; fileRef = 0348ECDF18C7CDC800C69934 /* item0002.png */; };
+		0348ECE318C7CDC800C69934 /* item0003.png in Resources */ = {isa = PBXBuildFile; fileRef = 0348ECE018C7CDC800C69934 /* item0003.png */; };
 		03722BBD18AAC73300B2EEBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03722BBC18AAC73300B2EEBC /* Foundation.framework */; };
 		03722BBF18AAC73300B2EEBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03722BBE18AAC73300B2EEBC /* CoreGraphics.framework */; };
 		03722BC118AAC73300B2EEBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03722BC018AAC73300B2EEBC /* UIKit.framework */; };
@@ -60,6 +64,11 @@
 /* Begin PBXFileReference section */
 		0348ECB018C7A62C00C69934 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
 		0348ECB118C7A62C00C69934 /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
+		0348ECDB18C7CB7E00C69934 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = aventura/Item.h; sourceTree = SOURCE_ROOT; };
+		0348ECDC18C7CB7E00C69934 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Item.m; path = aventura/Item.m; sourceTree = SOURCE_ROOT; };
+		0348ECDE18C7CDC800C69934 /* item0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item0001.png; sourceTree = "<group>"; };
+		0348ECDF18C7CDC800C69934 /* item0002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item0002.png; sourceTree = "<group>"; };
+		0348ECE018C7CDC800C69934 /* item0003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item0003.png; sourceTree = "<group>"; };
 		03722BB918AAC73300B2EEBC /* Aventura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aventura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03722BBC18AAC73300B2EEBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		03722BBE18AAC73300B2EEBC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,6 +244,8 @@
 				037E8DA118AD7FB00009DAB5 /* Action.m */,
 				03E3CF3C18BA0F7000B9D789 /* Estat.h */,
 				03E3CF3D18BA0F7000B9D789 /* Estat.m */,
+				0348ECDB18C7CB7E00C69934 /* Item.h */,
+				0348ECDC18C7CB7E00C69934 /* Item.m */,
 			);
 			name = "02. Classes";
 			sourceTree = "<group>";
@@ -265,6 +276,9 @@
 		C73BC12318C4972B00C46E86 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0348ECDE18C7CDC800C69934 /* item0001.png */,
+				0348ECDF18C7CDC800C69934 /* item0002.png */,
+				0348ECE018C7CDC800C69934 /* item0003.png */,
 				C75AA6AB18C65D3F00FCFC93 /* 5-map-crosshair@2x.png */,
 				03DAA8C518BD3B6100A2A19A /* box.png */,
 			);
@@ -402,10 +416,13 @@
 				03722BFE18AACEBA00B2EEBC /* AG_0001.mp4 in Resources */,
 				03722BFF18AACEBA00B2EEBC /* AG_0002.mp4 in Resources */,
 				03722C0018AACEBA00B2EEBC /* AG_0003.mp4 in Resources */,
+				0348ECE218C7CDC800C69934 /* item0002.png in Resources */,
 				03722C0118AACEBA00B2EEBC /* AG_0004.mp4 in Resources */,
 				03DAA8C618BD3B6100A2A19A /* box.png in Resources */,
 				C7F6088018C4F60500E03078 /* Scene0.xml in Resources */,
 				03722C0218AACEBA00B2EEBC /* AG_0005.mp4 in Resources */,
+				0348ECE118C7CDC800C69934 /* item0001.png in Resources */,
+				0348ECE318C7CDC800C69934 /* item0003.png in Resources */,
 				03722C0318AACEBA00B2EEBC /* AG_0006.mp4 in Resources */,
 				03722C0418AACEBA00B2EEBC /* AG_0007.mp4 in Resources */,
 				03722C0518AACEBA00B2EEBC /* AG_0008.mp4 in Resources */,
@@ -439,6 +456,7 @@
 				0348ECB218C7A62C00C69934 /* Inventory.m in Sources */,
 				037E8DA218AD7FB00009DAB5 /* Action.m in Sources */,
 				C73BC12818C499FF00C46E86 /* EditorTouchMask_VC.m in Sources */,
+				0348ECDD18C7CB7E00C69934 /* Item.m in Sources */,
 				03722BCD18AAC73300B2EEBC /* AppDelegate.m in Sources */,
 				C73BC12E18C4BC1100C46E86 /* XMLTreeNode.cpp in Sources */,
 				03722BC918AAC73300B2EEBC /* main.m in Sources */,

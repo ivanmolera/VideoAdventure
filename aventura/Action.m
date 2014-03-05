@@ -39,12 +39,7 @@
 
 - (void) doAction {
 
-    // Esborro les etiquetes i imatges
-    for (UIView *i in self.escena.subviews) {
-        if ([i isKindOfClass:[UILabel class]] || [i isKindOfClass:[UIImageView class]]) {
-            [i removeFromSuperview];
-        }
-    }
+    [self.escena removeLabelsFromEscena];
 
     switch (self.m_iType) {
         case ActionTypeJumpToState:
@@ -69,19 +64,7 @@
             [self.escena addSubview:boxImage];
             */
             
-            CGRect myImageRect = CGRectMake(500, 20, 400, 60);
-
-            UILabel *messageLabel = [[UILabel alloc] initWithFrame:myImageRect];
-
-            [messageLabel setTextColor:[UIColor whiteColor]];
-            [messageLabel setBackgroundColor:[UIColor clearColor]];
-            [messageLabel setFont:[UIFont fontWithName: @"Laffayette Comic Pro" size: 14.0f]];
-            [messageLabel setText:NSLocalizedString(self.message, nil)];
-            [messageLabel setTextAlignment:NSTextAlignmentCenter];
-            [messageLabel setLineBreakMode:NSLineBreakByWordWrapping];
-            [messageLabel setNumberOfLines:0];
-
-            [self.escena addSubview:messageLabel];
+            [self.escena showMessage:self.message];
         }
             break;
             

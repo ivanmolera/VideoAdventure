@@ -8,3 +8,7 @@
 
 "txt_msg_0001" = "Hello...";
 "txt_msg_0002" = "English. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, erat at mollis tempus, arcu lectus ultrices enim, id scelerisque elit justo vel ligula.";
+
+"item0001" = "Flower";
+"item0002" = "Glass";
+"item0003" = "Bottle of wine";

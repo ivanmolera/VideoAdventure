@@ -7,6 +7,7 @@
 //
 
 #import "Inventory.h"
+#import "Item.h"
 
 @implementation Inventory
 
@@ -15,7 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[UIColor blackColor]];
         [self setHidden:NO];
 
         _initFrame = frame;
@@ -30,8 +31,20 @@
         [self bringSubviewToFront:_btn_showHide];
 
         _isShown = NO;
+        
+        self.items = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void) addItem:(Item*)item {
+    [item.button setFrame:CGRectMake(([self.items count]*150)+([self.items count]*5), 0, 150, 95)];
+    [item.button setHidden:!_isShown];
+    [item setEscena:self.escena];
+
+    [self.items addObject:item];
+
+    [self addSubview:item.button];
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -44,25 +57,52 @@
 
 - (void) toggleShowHide:(id)sender {
     if (!_isShown) {
-        self.frame =  CGRectMake(0, _initFrame.size.width-95, 50, 95);
-        [UIView animateWithDuration:0.25 animations:^{
-            self.frame =  CGRectMake(0, _initFrame.size.width-95, _initFrame.size.height, 95);
-            [_btn_showHide setFrame:CGRectMake(_initFrame.size.height-50, 0, 50, 95)];
-        }];
-        
-        [_btn_showHide setImage:[UIImage imageNamed:@"arrow_left.png"] forState:UIControlStateNormal];
-
-        _isShown = YES;
+        [self showInventory];
     }
     else {
-        [UIView animateWithDuration:0.25 animations:^{
-            self.frame =  CGRectMake(0, _initFrame.size.width-95, 50, 95);
-            [_btn_showHide setFrame:CGRectMake(0, 0, 50, 95)];
-        }];
-        
-        [_btn_showHide setImage:[UIImage imageNamed:@"arrow_right.png"] forState:UIControlStateNormal];
-        _isShown = NO;
+        [self hideInventory];
     }
+}
+
+- (void) showInventory {
+    self.frame =  CGRectMake(0, _initFrame.size.width-95, 50, 95);
+    [UIView animateWithDuration:0.25 animations:^{
+        self.frame =  CGRectMake(0, _initFrame.size.width-95, _initFrame.size.height, 95);
+        [_btn_showHide setFrame:CGRectMake(_initFrame.size.height-50, 0, 50, 95)];
+        
+        for (Item *item in self.items) {
+            [item.button setFrame:CGRectMake(([self.items indexOfObject:item]*150)+([self.items indexOfObject:item]*5), 0, 150, 95)];
+            [item.button setHidden:NO];
+        }
+    }];
+    
+    [_btn_showHide setImage:[UIImage imageNamed:@"arrow_left.png"] forState:UIControlStateNormal];
+    
+    _isShown = YES;
+}
+
+- (void) hideInventory {
+    [UIView animateWithDuration:0.25 animations:^{
+        self.frame =  CGRectMake(0, _initFrame.size.width-95, 50, 95);
+        [_btn_showHide setFrame:CGRectMake(0, 0, 50, 95)];
+        
+        for (Item *item in self.items) {
+            [item.button setFrame:CGRectMake(([self.items indexOfObject:item]*150)+([self.items indexOfObject:item]*5), 0, 150, 95)];
+            [item.button setHidden:YES];
+        }
+    }];
+    
+    [_btn_showHide setImage:[UIImage imageNamed:@"arrow_right.png"] forState:UIControlStateNormal];
+    
+    _isShown = NO;
+}
+
+- (void) ordenaItems {
+    [UIView animateWithDuration:0.25 animations:^{
+        for (Item *item in self.items) {
+            [item.button setFrame:CGRectMake(([self.items indexOfObject:item]*150)+([self.items indexOfObject:item]*5), 0, 150, 95)];
+        }
+    }];
 }
 
 /*

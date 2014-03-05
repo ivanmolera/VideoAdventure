@@ -12,6 +12,7 @@
 #import "TouchMask.h"
 #import "Action.h"
 #import "Inventory.h"
+#import "Item.h"
 #import "XMLTreeNode.h"
 //-----------------------
 
@@ -48,8 +49,18 @@
     
     // Inventari
     self.inventory = [[Inventory alloc] initWithFrame:self.view.frame];
+    [self.inventory setEscena:self.m_aEscenes[self.m_iCurrentEscena]];
     [self.view addSubview:self.inventory];
     [self.view bringSubviewToFront:self.inventory];
+    
+    Item *item0001 = [[Item alloc] initWithIdentifier:@"item0001"];
+    [self.inventory addItem:item0001];
+
+    Item *item0002 = [[Item alloc] initWithIdentifier:@"item0002"];
+    [self.inventory addItem:item0002];
+    
+    Item *item0003 = [[Item alloc] initWithIdentifier:@"item0003"];
+    [self.inventory addItem:item0003];
 }
 
 - (void) showHideMasks {
@@ -102,6 +113,8 @@
                     bool canDoAction = [action check:shapeLayer.identifier];
 
                     if(canDoAction) {
+                        [self.inventory ordenaItems];
+
                         NSLog(@"Action %@", action.identifier);
                         [action doAction];
                     }
