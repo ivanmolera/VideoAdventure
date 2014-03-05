@@ -33,9 +33,6 @@ typedef enum {
 // Show/Hide layers
 @property (nonatomic, strong) UISwitch          *switchBtn;
 
-// Inventari
-@property (nonatomic, strong) Inventory         *inventory;
-
 // Touch points
 @property (nonatomic, strong) NSMutableArray    *beginTouchPoints;
 @property (nonatomic, strong) NSMutableArray    *endTouchPoints;
@@ -45,6 +42,8 @@ typedef enum {
 
 // Escena actual
 @property (nonatomic, assign) int               m_iCurrentEscena;
+
+@property (nonatomic, strong) Inventory         *inventory;
 
 
 

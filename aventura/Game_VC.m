@@ -11,8 +11,8 @@
 #import "Escena.h"
 #import "TouchMask.h"
 #import "Action.h"
-#import "XMLTreeNode.h"
 #import "Inventory.h"
+#import "XMLTreeNode.h"
 //-----------------------
 
 @interface Game_VC ()
@@ -42,8 +42,8 @@
     self.switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(self.view.frame.size.height-80, 35, 100, 40)];
     [self.switchBtn setOn:NO];
     [self.switchBtn addTarget:self
-               action:@selector(showHideMasks)
-     forControlEvents:UIControlEventValueChanged];
+                       action:@selector(showHideMasks)
+             forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.switchBtn];
     
     // Inventari
@@ -194,7 +194,7 @@
                             }
                             [masks addObject:[[TouchMask alloc ] initWithCoords:coords
                                                                        andFrame:self.view.frame
-                                                                  andIdentifier:touchMaskID]];
+                                                                  andIdentifier:touchMaskID andIsHidden:YES]];
                         }
                     }
                     
@@ -625,7 +625,7 @@
                                   [NSValue valueWithCGPoint:CGPointMake(572, 593)],
                                   nil];
         
-        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"1"];
+        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"1" andIsHidden:YES];
     }
     return mask;
 }
@@ -648,7 +648,7 @@
                                   [NSValue valueWithCGPoint:CGPointMake(560, 553)],
                                   nil];
         
-        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"2"];
+        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"2" andIsHidden:YES];
     }
     return mask;
 }
@@ -680,7 +680,7 @@
                                   [NSValue valueWithCGPoint:CGPointMake(769,645)],
                                   nil];
         
-        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"3"];
+        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"3" andIsHidden:YES];
     }
     return mask;
 }
@@ -696,7 +696,7 @@
                                   [NSValue valueWithCGPoint:CGPointMake(650, 350)],
                                   nil];
         
-        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"4"];
+        mask = [[TouchMask alloc ] initWithCoords:coords andFrame:self.view.frame andIdentifier:@"4" andIsHidden:YES];
     }
     return mask;
 }

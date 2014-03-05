@@ -9,7 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    
+}
 
+//---Properties:
 @property (strong, nonatomic) UIWindow *window;
 
+
+//---Functions:
++ (AppDelegate*) mainAppDelegate;
++ (BOOL) createAGDirectory;
++ (NSString*) getAGPath;
++ (BOOL) deleteAGFile:(NSString*)_name;
++ (NSArray*) getAllAGInDirectory;
 @end

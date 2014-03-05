@@ -18,6 +18,6 @@
 
 
 - (id)initWithIdentifier:(NSString *)identifier;
-- (id)initWithCoords:(NSMutableArray*)coords andFrame:(CGRect)frame andIdentifier:(NSString *)identifier;
+- (id)initWithCoords:(NSMutableArray*)coords andFrame:(CGRect)frame andIdentifier:(NSString *)identifier andIsHidden:(bool) isHidden;
 
 @end

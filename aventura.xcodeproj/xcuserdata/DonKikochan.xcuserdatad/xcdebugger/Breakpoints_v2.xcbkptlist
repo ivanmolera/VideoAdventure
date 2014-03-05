@@ -393,5 +393,127 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aventura/EditorTouchMask_VC.m"
+            timestampString = "415721080.849842"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-updateStateMachine"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EditorTouchMask_VC updateStateMachine]"
+                  moduleName = "Aventura"
+                  urlString = "file:///Users/DonKikochan/repositori_ios/aventura/EditorTouchMask_VC.m"
+                  timestampString = "415649836.698279"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EditorTouchMask_VC updateStateMachine]"
+                  moduleName = "Aventura"
+                  urlString = "file:///Users/DonKikochan/repositori_ios/aventura/EditorTouchMask_VC.m"
+                  timestampString = "415649836.698672"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aventura/EditorTouchMask_VC.m"
+            timestampString = "415720972.536567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "439"
+            endingLineNumber = "439"
+            landmarkName = "-createXMLFromTouchMasks:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EditorTouchMask_VC createXMLFromTouchMasks:]"
+                  moduleName = "Aventura"
+                  urlString = "file:///Users/DonKikochan/repositori_ios/aventura/EditorTouchMask_VC.m"
+                  timestampString = "415721586.641868"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "439"
+                  endingLineNumber = "439"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EditorTouchMask_VC createXMLFromTouchMasks:]"
+                  moduleName = "Aventura"
+                  urlString = "file:///Users/DonKikochan/repositori_ios/aventura/EditorTouchMask_VC.m"
+                  timestampString = "415721586.642277"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "439"
+                  endingLineNumber = "439"
+                  offsetFromSymbolStart = "1702">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EditorTouchMask_VC createXMLFromTouchMasks:]"
+                  moduleName = "Aventura"
+                  urlString = "file:///Users/DonKikochan/repositori_ios/aventura/EditorTouchMask_VC.m"
+                  timestampString = "415721586.64258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "439"
+                  endingLineNumber = "439"
+                  offsetFromSymbolStart = "1864">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aventura/EditorTouchMask_VC.m"
+            timestampString = "415721223.630237"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "487"
+            endingLineNumber = "487"
+            landmarkName = "-createXMLFromTouchMasks:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

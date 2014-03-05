@@ -10,6 +10,14 @@
 
 @implementation AppDelegate
 
+#define AG_PATH @"PATH_SUPER_AVENTURA_GRAFICA"
+
++ (AppDelegate*) mainAppDelegate
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -42,5 +50,60 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
++ (BOOL) createAGDirectory
+{
+    NSFileManager *filemgr;
+    filemgr =[NSFileManager defaultManager];
+    
+    NSString* grahFilterDir = [self getAGPath];
+    if ([filemgr createDirectoryAtPath:grahFilterDir withIntermediateDirectories:YES attributes:nil error: NULL] == NO)
+    {
+        // Failed to create directory
+        NSLog(@"Failed to create AventuraGrafica directory:%@",grahFilterDir);
+        return NO;
+    }
+    return YES;
+}
+
+
+
++ (NSString*) getAGPath
+{
+    NSString *docsDir = [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString * graphFilterDir = [docsDir stringByAppendingPathComponent:AG_PATH];
+    return graphFilterDir;
+}
+
+
+
++ (BOOL) deleteAGFile:(NSString*)_name
+{
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    NSString* l_sFileName = [NSString stringWithFormat:@"%@.xml",_name];
+    NSString *filePath = [[self getAGPath] stringByAppendingPathComponent:l_sFileName];
+    
+    if (![filemgr removeItemAtPath:filePath error:NULL])
+    {
+        // Failed to create directory
+        NSLog(@"Failed to delete SceneXML:%@", l_sFileName);
+        return NO;
+    }
+    return YES;
+}
+
+
+
++ (NSArray*) getAllAGInDirectory
+{
+    NSError * error;
+    NSArray * directoryContents = [NSArray array];
+    
+    directoryContents =  [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self getAGPath] error:&error];
+    return directoryContents;
+}
+
 
 @end

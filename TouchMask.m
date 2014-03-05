@@ -19,7 +19,7 @@
     return self;
 }
 
-- (id)initWithCoords:(NSMutableArray*)coords andFrame:(CGRect)frame andIdentifier:(NSString *)identifier
+- (id)initWithCoords:(NSMutableArray*)coords andFrame:(CGRect)frame andIdentifier:(NSString *)identifier andIsHidden:(bool) isHidden
 {
     self = [super init];
     if (self) {
@@ -43,7 +43,7 @@
         self.strokeColor = [UIColor redColor].CGColor;
         self.fillColor = [UIColor clearColor].CGColor;
         [self setOpacity:1];
-        [self setHidden:YES];
+        [self setHidden:isHidden];
     }
     return self;
 }
