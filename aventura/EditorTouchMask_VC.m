@@ -11,6 +11,8 @@
 #import "TouchMask.h"
 #import "AppDelegate.h"
 #import "XMLTreeNode.h"
+#import "EditorCell.h"
+#import "XMLTreeNode.h"
 //-----------------------------
 
 @interface EditorTouchMask_VC ()
@@ -34,6 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _moviePlayer = [[AVPlayer alloc] init];
+    _movieLayer = [AVPlayerLayer layer];
+    [_movieLayer setPlayer:_moviePlayer];
+    [_movieLayer setFrame:self.videoView.frame];
+    [_movieLayer setBackgroundColor:[UIColor blackColor].CGColor];
+    [self.videoView.layer addSublayer:_movieLayer];
     
 	// Do any additional setup after loading the view.
     m_aCoords       = [[NSMutableArray alloc] init];
@@ -47,6 +55,10 @@
     _view_MenuGeneral.hidden        = NO;
     _view_MenuNewTouch.hidden       = YES;
     _view_MenuCreateTouch.hidden    = YES;
+    _tableView.hidden               = YES;
+    
+    m_aXMLScenes = [[NSBundle mainBundle] pathsForResourcesOfType:@"xml" inDirectory:nil];
+    m_aVideos = [[NSBundle mainBundle] pathsForResourcesOfType:@"mp4" inDirectory:nil];
 }
 
 - (void) showMenu
@@ -221,6 +233,25 @@
     _txtF_TouchID.text = @"";
 }
 
+- (IBAction)loadAvi_Pressed:(id)sender
+{
+    _tableView.hidden = NO;
+    m_eTypeTV_Editor = TV_Videos;
+    [_tableView reloadData];
+}
+
+- (IBAction)loadXML_Pressed:(id)sender
+{
+    _tableView.hidden = NO;
+    m_eTypeTV_Editor = TV_XMLFiles;
+    [_tableView reloadData];
+}
+
+- (IBAction)backFromTableView_Pressed:(id)sender
+{
+    _tableView.hidden = YES;
+}
+
 - (IBAction)editMask_Pressed:(id)sender
 {
     
@@ -302,7 +333,6 @@
         [self updateStateMachine];
         _btn_Undo.enabled = NO;
     }
-    
 }
 
 - (IBAction)multiPoints_Pressed:(id)sender
@@ -358,6 +388,8 @@
     _txtF_TouchID.text = @"";
 }
 
+
+
 - (IBAction)undo_Pressed:(id)sender
 {
     if (m_bRectangleMode == true)
@@ -381,12 +413,6 @@
     }
 }
 //--------------------------------------------
-
-
-
-
-
-
 
 
 - (IBAction)newPoint_TapGesture:(id)sender
@@ -515,6 +541,167 @@
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+
+
+- (void) namePressed:(int) _index
+{
+    _tableView.hidden = YES;
+    
+    switch (m_eTypeTV_Editor) {
+        case TV_Videos:
+        {
+            NSString* nameVideo = m_aVideos[_index];
+            nameVideo = [nameVideo lastPathComponent];
+            nameVideo = [nameVideo stringByDeletingPathExtension];
+            NSBundle *bundle    = [NSBundle mainBundle];
+            NSString *path      = [bundle pathForResource:nameVideo ofType:@"mp4"];
+            NSURL *movieUrl     = [NSURL fileURLWithPath:path];
+            
+            AVURLAsset *movieOneItemAsset = [AVURLAsset URLAssetWithURL:movieUrl options:nil];
+            AVPlayerItem *movieItem = [AVPlayerItem playerItemWithAsset:movieOneItemAsset];
+            
+            [_moviePlayer replaceCurrentItemWithPlayerItem:movieItem];
+            [_movieLayer setPlayer:_moviePlayer];
+        }
+            break;
+        case TV_XMLFiles:
+        {
+            [m_aCoords removeAllObjects];
+            for(TouchMask* touchmask in m_aTouchMasks)
+            {
+                [touchmask removeFromSuperlayer];
+            }
+            [m_aTouchMasks removeAllObjects];
+            
+            NSString* namefile = m_aXMLScenes[_index];
+            CXMLTreeNode xmlTN;
+            if (!xmlTN.LoadFile([namefile UTF8String]))
+            {
+                NSLog(@"Error LoadXML:%@",namefile);
+            }
+            else
+            {
+                NSLog(@"Parsing file: %@",[namefile lastPathComponent]);
+                
+                CXMLTreeNode  escenaTN = xmlTN["Escena"];
+                //<Escena id="0">
+                if (escenaTN.Exists())
+                {
+                    CXMLTreeNode  touchMasksTN = xmlTN["TouchMasks"];
+                    // <TouchMasks>
+                    if (touchMasksTN.Exists())
+                    {
+                        int count = touchMasksTN.GetNumChildren();
+                        for (int i = 0; i < count; ++i)
+                        {
+                            // <TouchMask id="1">
+                            CXMLTreeNode  touchMaskTN = touchMasksTN(i);
+                            
+                            const char* _touchMaskID   = touchMaskTN.GetPszProperty("id");
+                            NSString* touchMaskID      = [NSString stringWithUTF8String:_touchMaskID];
+                            //<Coords>
+                            CXMLTreeNode  coordsTN = touchMaskTN["Coords"];
+                            if (coordsTN.Exists())
+                            {
+                                NSMutableArray *coords = [[NSMutableArray alloc] init];
+                                int count2 = coordsTN.GetNumChildren();
+                                for (int j = 0; j < count2; ++j)
+                                {
+                                    //<Coord step="0">522,602</Coord>
+                                    CXMLTreeNode  coordTN = coordsTN(j);
+                                    int posX = 0;
+                                    int posY = 0;
+                                    posX = coordTN.GetIntProperty("posX");
+                                    posY = coordTN.GetIntProperty("posY");
+                                    [coords addObject:[NSValue valueWithCGPoint:CGPointMake(posX, posY)]];
+                                }
+                                TouchMask* newTouchMask = [[TouchMask alloc ] initWithCoords:coords
+                                                                                    andFrame:self.view.frame
+                                                                               andIdentifier:touchMaskID andIsHidden:NO];
+                                [self.view.layer addSublayer:newTouchMask];
+                                [m_aTouchMasks addObject:newTouchMask];
+                            }
+                        }
+                        
+                    }//END: if (touchMasksTN.Exists())
+
+                }//END:if (escenaTN.Exists())
+            }
+        }
+        default:
+            break;
+    }
+}
+
+#pragma mark - Table view data source
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 72.f;
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    switch (m_eTypeTV_Editor) {
+        case TV_Videos:
+        {
+            return m_aVideos.count;
+        }
+            break;
+        case TV_XMLFiles:
+        {
+            return m_aXMLScenes.count;
+        }
+        default:
+            break;
+    }
+    
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"EditorCell";
+    EditorCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    // Configure the cell...
+    if (cell == nil)
+    {
+        cell = [[EditorCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    
+    [cell setIndex:indexPath.row andController:self];
+    
+    switch (m_eTypeTV_Editor) {
+        case TV_Videos:
+        {
+            NSString *xmlFullPath = m_aVideos[indexPath.row];
+            [cell.btn_Name setTitle:[xmlFullPath lastPathComponent] forState:UIControlStateNormal];
+        }
+            break;
+        case TV_XMLFiles:
+        {
+            NSString *xmlFullPath = m_aXMLScenes[indexPath.row];
+            [cell.btn_Name setTitle:[xmlFullPath lastPathComponent] forState:UIControlStateNormal];
+        }
+        default:
+            break;
+    }
+    
+    return cell;
+}
+
+
 
 
 @end

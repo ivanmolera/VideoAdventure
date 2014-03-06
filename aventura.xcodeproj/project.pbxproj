@@ -48,6 +48,7 @@
 		C73BC13118C4C2D900C46E86 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BC13018C4C2D900C46E86 /* libxml2.dylib */; };
 		C73BC13318C4CAF100C46E86 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BC13218C4CAF100C46E86 /* QuartzCore.framework */; };
 		C75AA6AC18C65D3F00FCFC93 /* 5-map-crosshair@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C75AA6AB18C65D3F00FCFC93 /* 5-map-crosshair@2x.png */; };
+		C7A8CBDC18C883D30048E337 /* EditorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8CBDB18C883D30048E337 /* EditorCell.m */; };
 		C7F6088018C4F60500E03078 /* Scene0.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7F6087F18C4F60500E03078 /* Scene0.xml */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,8 @@
 		C73BC13018C4C2D900C46E86 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		C73BC13218C4CAF100C46E86 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C75AA6AB18C65D3F00FCFC93 /* 5-map-crosshair@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5-map-crosshair@2x.png"; path = "aventura/5-map-crosshair@2x.png"; sourceTree = SOURCE_ROOT; };
+		C7A8CBDA18C883D30048E337 /* EditorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorCell.h; path = aventura/EditorCell.h; sourceTree = SOURCE_ROOT; };
+		C7A8CBDB18C883D30048E337 /* EditorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorCell.m; path = aventura/EditorCell.m; sourceTree = SOURCE_ROOT; };
 		C7F6087F18C4F60500E03078 /* Scene0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scene0.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,6 +260,8 @@
 				03722BD218AAC73300B2EEBC /* Game_VC.m */,
 				C73BC12618C499FF00C46E86 /* EditorTouchMask_VC.h */,
 				C73BC12718C499FF00C46E86 /* EditorTouchMask_VC.m */,
+				C7A8CBDA18C883D30048E337 /* EditorCell.h */,
+				C7A8CBDB18C883D30048E337 /* EditorCell.m */,
 			);
 			name = "01. View Controllers";
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 				0348ECDD18C7CB7E00C69934 /* Item.m in Sources */,
 				03722BCD18AAC73300B2EEBC /* AppDelegate.m in Sources */,
 				C73BC12E18C4BC1100C46E86 /* XMLTreeNode.cpp in Sources */,
+				C7A8CBDC18C883D30048E337 /* EditorCell.m in Sources */,
 				03722BC918AAC73300B2EEBC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

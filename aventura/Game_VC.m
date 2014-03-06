@@ -150,6 +150,9 @@
 
 - (void) loadAllXML:(NSString*)pathDirectory
 {
+    
+    NSMutableArray *escenes = [[NSMutableArray alloc] init];
+    
     NSLog(@"-------Loading XML Scenes---------");
     NSArray* aXMLScenes = [[NSBundle mainBundle] pathsForResourcesOfType:@"xml" inDirectory:nil];
     for(NSString *sceneXML in aXMLScenes)
@@ -312,17 +315,20 @@
                     escena.m_iCurrentEstat = 0;
                     [escena setCurrentEstat:[estats objectAtIndex:escena.m_iCurrentEstat]];
                     
-                    NSMutableArray *escenes = [[NSMutableArray alloc] init];
+                    
                     [escenes addObject:escena];
                     
-                    [self setM_aEscenes:escenes];
-                    self.m_iCurrentEscena = 0;
+                    
                     
                 }//END: if (estatsTN.Exists())
-            }
+            
+            }//END if (escenaTN.Exists())
         }
     }
     NSLog(@"----------------------------------");
+    
+    [self setM_aEscenes:escenes];
+    self.m_iCurrentEscena = 0;
 }
 
 - (void) loadXML:(NSString *)pathXML {

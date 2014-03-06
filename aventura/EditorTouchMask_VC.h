@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "TouchMask.h"
 #import <MessageUI/MessageUI.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 //-----------------------
 
 
@@ -21,25 +23,38 @@ typedef enum {
     NoneSate
     
 } AGEditorState;
+
+typedef enum {
+    TV_Videos,
+    TV_XMLFiles,
+    NoneTableView
+    
+} AGTypeTableViewEditor;
 //---------------------------
 
 
 
 @interface EditorTouchMask_VC : UIViewController <MFMailComposeViewControllerDelegate>
 {
-    AGEditorState       m_eState;
-    NSMutableArray*     m_aCoords;
-    NSMutableArray*     m_aTouchMasks;
-    BOOL                m_bShowMenu;
-    BOOL                m_bRectangleMode;
-    CGPoint             m_TapPoint;
-    TouchMask*          m_TouchMask_aux;
+    AGEditorState           m_eState;
+    NSMutableArray*         m_aCoords;
+    NSMutableArray*         m_aTouchMasks;
+    BOOL                    m_bShowMenu;
+    BOOL                    m_bRectangleMode;
+    CGPoint                 m_TapPoint;
+    TouchMask*              m_TouchMask_aux;
+    AGTypeTableViewEditor   m_eTypeTV_Editor;
+    NSArray*                m_aXMLScenes;
+    NSArray*                m_aVideos;
 }
+
+
 
 //---IBoutlets:------------------------------
 @property (strong, nonatomic) IBOutlet UIView*      view_Menu;
 @property (strong, nonatomic) IBOutlet UIImageView* img_StartPoint;
 @property (strong, nonatomic) IBOutlet UILabel*     lbl_OptionsMenu;
+@property (strong, nonatomic) IBOutlet UIView*      videoView;
 
 //---General Menu
 @property (strong, nonatomic) IBOutlet UIView*      view_MenuGeneral;
@@ -47,6 +62,9 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UIButton*    btn_NewMask;
 @property (strong, nonatomic) IBOutlet UIButton*    btn_EditMask;
 @property (strong, nonatomic) IBOutlet UIButton*    btn_SendXML;
+@property (strong, nonatomic) IBOutlet UIButton*    btn_LoadAvi;
+@property (strong, nonatomic) IBOutlet UIButton*    btn_LoadXML;
+@property (strong, nonatomic) IBOutlet UITableView* tableView;
 
 
 //---New Touch Menu
@@ -61,6 +79,11 @@ typedef enum {
 @property (strong, nonatomic) IBOutlet UIView*      view_MenuCreateTouch;
 @property (strong, nonatomic) IBOutlet UILabel*     lbl_TypeTouchMask;
 @property (strong, nonatomic) IBOutlet UIButton*    btn_Undo;
+
+
+// Player
+@property (nonatomic, strong) AVPlayer*             moviePlayer;
+@property (nonatomic, strong) AVPlayerLayer*        movieLayer;
 //---------------------------------------------
 
 //---IBActions:
@@ -78,7 +101,12 @@ typedef enum {
 - (IBAction)done_TouchID:(id)sender;
 - (IBAction)undo_Pressed:(id)sender;
 - (IBAction)backFromMenuCreateTouch_Pressed:(id)sender;
+- (IBAction)loadAvi_Pressed:(id)sender;
+- (IBAction)loadXML_Pressed:(id)sender;
+- (IBAction)backFromTableView_Pressed:(id)sender;
 
+//---Functions:
+- (void) namePressed:(int) _index;
 
 //---Functions:
 //...
