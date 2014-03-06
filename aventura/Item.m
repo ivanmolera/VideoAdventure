@@ -19,8 +19,11 @@
         self.description    = NSLocalizedString(identifier, nil);
 
         UIImage *imatge     = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", identifier]];
-        self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        self.button = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.button setBackgroundImage:imatge forState:UIControlStateNormal];
+        
+        [self.button.layer setCornerRadius:10.0f];
+        [self.button.layer setMasksToBounds:YES];
         
         // add drag listener
         [self.button addTarget:self action:@selector(wasDragged:withEvent:)

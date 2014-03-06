@@ -45,6 +45,13 @@
     [self.items addObject:item];
 
     [self addSubview:item.button];
+    [self bringSubviewToFront:item.button];
+}
+
+- (CGRect) getItemFrame:(Item*)item {
+    int index = [self.items indexOfObject:item];
+    int x = (index == 0) ? 5 : (index*145)+(index*5)+5;
+    return CGRectMake(x, 5, 140, 85);
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -71,7 +78,7 @@
         [_btn_showHide setFrame:CGRectMake(_initFrame.size.height-50, 0, 50, 95)];
         
         for (Item *item in self.items) {
-            [item.button setFrame:CGRectMake(([self.items indexOfObject:item]*150)+([self.items indexOfObject:item]*5), 0, 150, 95)];
+            [item.button setFrame:[self getItemFrame:item]];
             [item.button setHidden:NO];
         }
     }];
@@ -87,7 +94,7 @@
         [_btn_showHide setFrame:CGRectMake(0, 0, 50, 95)];
         
         for (Item *item in self.items) {
-            [item.button setFrame:CGRectMake(([self.items indexOfObject:item]*150)+([self.items indexOfObject:item]*5), 0, 150, 95)];
+            [item.button setFrame:[self getItemFrame:item]];
             [item.button setHidden:YES];
         }
     }];
@@ -100,7 +107,7 @@
 - (void) ordenaItems {
     [UIView animateWithDuration:0.25 animations:^{
         for (Item *item in self.items) {
-            [item.button setFrame:CGRectMake(([self.items indexOfObject:item]*150)+([self.items indexOfObject:item]*5), 0, 150, 95)];
+            [item.button setFrame:[self getItemFrame:item]];
         }
     }];
 }
