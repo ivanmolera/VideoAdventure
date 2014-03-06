@@ -10,19 +10,15 @@
 #import "Escena.h"
 #import "Item.h"
 
-@interface Inventory : UIView
+@interface Inventory : UIScrollView
 
-@property (nonatomic, assign) bool              isShown;
 @property (nonatomic, assign) CGRect            initFrame;
-@property (nonatomic, strong) UIButton          *btn_showHide;
 @property (nonatomic, strong) NSMutableArray    *items;
 
 @property (nonatomic, strong) Escena            *escena;
 
 
 - (void) addItem:(Item*)item;
-- (void) showInventory;
-- (void) hideInventory;
 - (void) ordenaItems;
 
 @end
