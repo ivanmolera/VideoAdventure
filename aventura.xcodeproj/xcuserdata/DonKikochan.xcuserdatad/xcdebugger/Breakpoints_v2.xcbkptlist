@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
             endingLineNumber = "137"
-            landmarkName = "-touchesBegan:withEvent:"
+            landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "134"
             endingLineNumber = "134"
-            landmarkName = "-touchesBegan:withEvent:"
+            landmarkName = "-touchesEnded:withEvent:"
             landmarkType = "5">
             <Locations>
                <Location
@@ -93,7 +93,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "180"
             endingLineNumber = "180"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
             <Locations>
                <Location
@@ -139,7 +139,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "178"
             endingLineNumber = "178"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -155,7 +155,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "179"
             endingLineNumber = "179"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
             <Locations>
                <Location
@@ -201,7 +201,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "201"
             endingLineNumber = "201"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -217,7 +217,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
             endingLineNumber = "247"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -233,7 +233,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "245"
             endingLineNumber = "245"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
             <Locations>
                <Location
@@ -279,7 +279,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "252"
             endingLineNumber = "252"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -295,7 +295,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "251"
             endingLineNumber = "251"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -311,7 +311,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "266"
             endingLineNumber = "266"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -327,7 +327,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "257"
             endingLineNumber = "257"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
             <Locations>
                <Location
@@ -373,23 +373,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "292"
             endingLineNumber = "292"
-            landmarkName = "-loadAllXML:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Aventura/Game_VC.m"
-            timestampString = "415793031.536989"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "-loadAllXML:"
+            landmarkName = "-loadAllXML"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -574,6 +558,54 @@
             startingLineNumber = "554"
             endingLineNumber = "554"
             landmarkName = "-namePressed:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aventura/Game_VC.m"
+            timestampString = "415914288.231281"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
+            landmarkName = "-loadAllXML"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aventura/Game_VC.m"
+            timestampString = "415915395.387424"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
+            landmarkName = "-loadAllXML"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aventura/Item.m"
+            timestampString = "415915515.493148"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-initWithIdentifier:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

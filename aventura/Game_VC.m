@@ -52,15 +52,6 @@
     [self.inventory setEscena:self.m_aEscenes[self.m_iCurrentEscena]];
     [self.view addSubview:self.inventory];
     [self.view bringSubviewToFront:self.inventory];
-    
-    Item *item0001 = [[Item alloc] initWithIdentifier:@"item0001"];
-    [self.inventory addItem:item0001];
-
-    Item *item0002 = [[Item alloc] initWithIdentifier:@"item0002"];
-    [self.inventory addItem:item0002];
-    
-    Item *item0003 = [[Item alloc] initWithIdentifier:@"item0003"];
-    [self.inventory addItem:item0003];
 }
 
 - (void) showHideMasks {
@@ -245,9 +236,23 @@
                         if ([type isEqualToString:@"jumpToState"])
                         {
                             int target = 0;
-                            target              = actionTN.GetIntProperty("target");
-                            action.m_iType      = ActionTypeJumpToState;
-                            action.target       = target;
+                            target                  = actionTN.GetIntProperty("target");
+                            action.target           = target;
+                            action.m_iType          = ActionTypeJumpToState;
+                            const char* _sound      = actionTN.GetPszProperty("playSound", "");
+                            action.playSound        = [NSString stringWithUTF8String:_sound];
+                            int _repeatMode         = actionTN.GetIntProperty("repeatMode");
+                            action.repeatMode       = (_repeatMode == 1);
+                            const char* _playMode   = actionTN.GetPszProperty("playMode", "");
+                            NSString* playMode      = [NSString stringWithUTF8String:_playMode];
+                            if ([playMode isEqualToString:@"normal"])
+                            {
+                                action.playMode = ActionPlayMpde_Normal;
+                            }
+                            else
+                            {
+                                action.playMode = ActionPlayMpde_Reverse;
+                            }
                         }
                         else if ([type isEqualToString:@"showMessage"])
                         {
@@ -256,7 +261,24 @@
                             action.m_iType          = ActionTypeShowMessage;
                             action.message          = message;
                         }
-                        
+                        else if ([type isEqualToString:@"jumpToScene"])
+                        {
+                            int _target         = actionTN.GetIntProperty("target");
+                            action.m_iType      = ActionTypeJumpToScene;
+                            action.target       = _target;
+                        }
+                        else if ([type isEqualToString:@"getItem"] || [type isEqualToString:@"useItem"])
+                        {
+                            const char* _message    = actionTN.GetPszProperty("message");
+                            NSString* message       = [NSString stringWithUTF8String:_message];
+                            action.message          = message;
+                            int target = 0;
+                            target                  = actionTN.GetIntProperty("target");
+                            action.target           = target;
+                            int nextState = 0;
+                            nextState               = actionTN.GetIntProperty("nextState");
+                            action.nextSate         = nextState;
+                        }
                         
                         NSMutableArray *masks_aux = [[NSMutableArray alloc] init];
                         int count2 = actionTN.GetNumChildren();
@@ -326,6 +348,26 @@
                 }//END: if (estatsTN.Exists())
             
             }//END if (escenaTN.Exists())
+            else
+            {
+                CXMLTreeNode  inventoryTN = xmlTN["Inventory"];
+                //<Inventory>
+                if (inventoryTN.Exists())
+                {
+                    int count = inventoryTN.GetNumChildren();
+                    for (int i = 0; i < count; ++i)
+                    {
+                        // <Item id="item0001"/>
+
+                        CXMLTreeNode  itemTN = inventoryTN(i);
+                        const char* _itemID   = itemTN.GetPszProperty("id");
+                        NSString* itemID      = [NSString stringWithUTF8String:_itemID];
+                        
+                        Item *newItem = [[Item alloc] initWithIdentifier:itemID];
+                        [self.inventory addItem:newItem];
+                    }
+                }
+            }
         }
     }
     NSLog(@"----------------------------------");

@@ -6,9 +6,14 @@
 //  Copyright (c) 2014 owlab. All rights reserved.
 //
 
+//-------Imports:--------------------
 #import <Foundation/Foundation.h>
 #import "Escena.h"
+//-----------------------------------
 
+
+
+//---Define new types:----------
 typedef enum {
     ActionTypeJumpToScene,
     ActionTypeJumpToState,
@@ -17,8 +22,20 @@ typedef enum {
     ActionTypeUseItem
 } AGActionType;
 
-@interface Action : NSObject
+typedef enum {
+    ActionPlayMpde_Normal,
+    ActionPlayMpde_Reverse
+} AGActionPlayMode;
+//------------------------------
 
+
+@interface Action : NSObject
+{
+    //Nothing...
+}
+
+
+//---------------Properties-----------------------------------
 // Identificador de l'acció
 @property (nonatomic, strong) NSString          *identifier;
 
@@ -30,11 +47,16 @@ typedef enum {
 
 // Properties de la action
 @property (nonatomic, assign) int               target;
+@property (nonatomic, assign) int               nextSate;
+@property (nonatomic, assign) BOOL              repeatMode;
+@property (nonatomic, assign) AGActionPlayMode  playMode;
 @property (nonatomic, strong) NSString          *message;
-
+@property (nonatomic, strong) NSString          *playSound;
 @property (nonatomic, strong) Escena            *escena;
+//-------------------------------------------------------------
 
 
+//---Functions:-------
 - (id) initWithIdentifier:(NSString *)identifier;
 - (bool) check:(NSString*)maskId;
 - (void) doAction;

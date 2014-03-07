@@ -49,6 +49,7 @@
 		C73BC13318C4CAF100C46E86 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73BC13218C4CAF100C46E86 /* QuartzCore.framework */; };
 		C75AA6AC18C65D3F00FCFC93 /* 5-map-crosshair@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C75AA6AB18C65D3F00FCFC93 /* 5-map-crosshair@2x.png */; };
 		C7A8CBDC18C883D30048E337 /* EditorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8CBDB18C883D30048E337 /* EditorCell.m */; };
+		C7A8CBE018CA58140048E337 /* Invetory.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7A8CBDF18CA58140048E337 /* Invetory.xml */; };
 		C7F6088018C4F60500E03078 /* Scene0.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7F6087F18C4F60500E03078 /* Scene0.xml */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		C75AA6AB18C65D3F00FCFC93 /* 5-map-crosshair@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5-map-crosshair@2x.png"; path = "aventura/5-map-crosshair@2x.png"; sourceTree = SOURCE_ROOT; };
 		C7A8CBDA18C883D30048E337 /* EditorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorCell.h; path = aventura/EditorCell.h; sourceTree = SOURCE_ROOT; };
 		C7A8CBDB18C883D30048E337 /* EditorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorCell.m; path = aventura/EditorCell.m; sourceTree = SOURCE_ROOT; };
+		C7A8CBDF18CA58140048E337 /* Invetory.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Invetory.xml; path = "aventura/Scene XML/Invetory.xml"; sourceTree = SOURCE_ROOT; };
 		C7F6087F18C4F60500E03078 /* Scene0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scene0.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -333,6 +335,7 @@
 		C7F6087E18C4F60500E03078 /* Scene XML */ = {
 			isa = PBXGroup;
 			children = (
+				C7A8CBDF18CA58140048E337 /* Invetory.xml */,
 				C7F6087F18C4F60500E03078 /* Scene0.xml */,
 			);
 			name = "Scene XML";
@@ -436,6 +439,7 @@
 				03722BC718AAC73300B2EEBC /* InfoPlist.strings in Resources */,
 				C75AA6AC18C65D3F00FCFC93 /* 5-map-crosshair@2x.png in Resources */,
 				03722BD018AAC73300B2EEBC /* Main.storyboard in Resources */,
+				C7A8CBE018CA58140048E337 /* Invetory.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
