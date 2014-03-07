@@ -498,8 +498,13 @@
                 //<Coord step="0"     posX="567"  posY="514"/>
                 NewXML.StartElement("Coord");
                 NewXML.WriteIntProperty("step",step);
-                NewXML.WriteIntProperty("posX",[coord CGPointValue].x);
-                NewXML.WriteIntProperty("posY",[coord CGPointValue].y);
+                //Convert pixels-->%
+                int x = [coord CGPointValue].x;
+                int y = [coord CGPointValue].y;
+                float xPercent = x / self.view.frame.size.width;
+                float yPercent = y / self.view.frame.size.height;
+                NewXML.WriteFloatProperty("posX", xPercent);
+                NewXML.WriteIntProperty("posY", yPercent);
                 NewXML.EndElement(); //Coords
                 step++;
             }
@@ -610,10 +615,13 @@
                                 {
                                     //<Coord step="0">522,602</Coord>
                                     CXMLTreeNode  coordTN = coordsTN(j);
-                                    int posX = 0;
-                                    int posY = 0;
-                                    posX = coordTN.GetIntProperty("posX");
-                                    posY = coordTN.GetIntProperty("posY");
+                                    int posX_precent = 0;
+                                    int posY_precent = 0;
+                                    posX_precent = coordTN.GetFloatProperty("posX");
+                                    posY_precent = coordTN.GetFloatProperty("posY");
+                                    
+                                    int posX = (int)(posX_precent * self.view.frame.size.width);
+                                    int posY = (int)(posY_precent * self.view.frame.size.height);
                                     [coords addObject:[NSValue valueWithCGPoint:CGPointMake(posX, posY)]];
                                 }
                                 TouchMask* newTouchMask = [[TouchMask alloc ] initWithCoords:coords

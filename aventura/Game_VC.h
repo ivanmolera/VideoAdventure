@@ -43,11 +43,10 @@ typedef enum {
 // Escena actual
 @property (nonatomic, assign) int               m_iCurrentEscena;
 
+// Inventari
 @property (nonatomic, strong) Inventory         *inventory;
 
 
 
-//----Functions:
-- (void) loadXML:(NSString*)pathXML;
 
 @end

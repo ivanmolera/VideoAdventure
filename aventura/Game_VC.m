@@ -27,7 +27,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    [self loadAllXML:@"KAKA"];
+    [self loadAllXML];
     //[self loadXML:@""];
 
     [self.view addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
@@ -148,7 +148,7 @@
     [self update:EventTypeTouch];
 }
 
-- (void) loadAllXML:(NSString*)pathDirectory
+- (void) loadAllXML
 {
     
     NSMutableArray *escenes = [[NSMutableArray alloc] init];
@@ -202,10 +202,13 @@
                             {
                                 //<Coord step="0">522,602</Coord>
                                 CXMLTreeNode  coordTN = coordsTN(j);
-                                int posX = 0;
-                                int posY = 0;
-                                posX = coordTN.GetIntProperty("posX");
-                                posY = coordTN.GetIntProperty("posY");
+                                int posX_precent = 0;
+                                int posY_precent = 0;
+                                posX_precent = coordTN.GetFloatProperty("posX");
+                                posY_precent = coordTN.GetFloatProperty("posY");
+                            
+                                int posX = (int)(posX_precent * self.view.frame.size.width);
+                                int posY = (int)(posY_precent * self.view.frame.size.height);
                                 [coords addObject:[NSValue valueWithCGPoint:CGPointMake(posX, posY)]];
                             }
                             [masks addObject:[[TouchMask alloc ] initWithCoords:coords
