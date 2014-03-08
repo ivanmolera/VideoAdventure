@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032C27B118CB1DE300331799 /* ItemMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 032C27B018CB1DE300331799 /* ItemMask.m */; };
 		0348ECB218C7A62C00C69934 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECB118C7A62C00C69934 /* Inventory.m */; };
 		0348ECDD18C7CB7E00C69934 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECDC18C7CB7E00C69934 /* Item.m */; };
 		0348ECE118C7CDC800C69934 /* item0001.png in Resources */ = {isa = PBXBuildFile; fileRef = 0348ECDE18C7CDC800C69934 /* item0001.png */; };
@@ -64,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032C27AF18CB1DE300331799 /* ItemMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMask.h; sourceTree = "<group>"; };
+		032C27B018CB1DE300331799 /* ItemMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemMask.m; sourceTree = "<group>"; };
 		0348ECB018C7A62C00C69934 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
 		0348ECB118C7A62C00C69934 /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
 		0348ECDB18C7CB7E00C69934 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = aventura/Item.h; sourceTree = SOURCE_ROOT; };
@@ -239,18 +242,20 @@
 		03E3CF3F18BA0F8200B9D789 /* 02. Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0348ECB018C7A62C00C69934 /* Inventory.h */,
-				0348ECB118C7A62C00C69934 /* Inventory.m */,
 				03722BF318AAC78500B2EEBC /* Escena.h */,
 				03722BF418AAC78500B2EEBC /* Escena.m */,
-				037E8D9D18AC8A3E0009DAB5 /* TouchMask.h */,
-				037E8D9E18AC8A3E0009DAB5 /* TouchMask.m */,
-				037E8DA018AD7FB00009DAB5 /* Action.h */,
-				037E8DA118AD7FB00009DAB5 /* Action.m */,
 				03E3CF3C18BA0F7000B9D789 /* Estat.h */,
 				03E3CF3D18BA0F7000B9D789 /* Estat.m */,
+				037E8DA018AD7FB00009DAB5 /* Action.h */,
+				037E8DA118AD7FB00009DAB5 /* Action.m */,
+				037E8D9D18AC8A3E0009DAB5 /* TouchMask.h */,
+				037E8D9E18AC8A3E0009DAB5 /* TouchMask.m */,
+				0348ECB018C7A62C00C69934 /* Inventory.h */,
+				0348ECB118C7A62C00C69934 /* Inventory.m */,
 				0348ECDB18C7CB7E00C69934 /* Item.h */,
 				0348ECDC18C7CB7E00C69934 /* Item.m */,
+				032C27AF18CB1DE300331799 /* ItemMask.h */,
+				032C27B018CB1DE300331799 /* ItemMask.m */,
 			);
 			name = "02. Classes";
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				037E8DA218AD7FB00009DAB5 /* Action.m in Sources */,
 				C73BC12818C499FF00C46E86 /* EditorTouchMask_VC.m in Sources */,
 				0348ECDD18C7CB7E00C69934 /* Item.m in Sources */,
+				032C27B118CB1DE300331799 /* ItemMask.m in Sources */,
 				03722BCD18AAC73300B2EEBC /* AppDelegate.m in Sources */,
 				C73BC12E18C4BC1100C46E86 /* XMLTreeNode.cpp in Sources */,
 				C7A8CBDC18C883D30048E337 /* EditorCell.m in Sources */,

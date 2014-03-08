@@ -13,6 +13,7 @@
 #import "Action.h"
 #import "Inventory.h"
 #import "Item.h"
+#import "ItemMask.h"
 #import "XMLTreeNode.h"
 //-----------------------
 
@@ -59,7 +60,6 @@
 
     for (id sublayer in currentEscena.layer.sublayers) {
         
-        if ([sublayer isKindOfClass:[TouchMask class]]) {
         if ([sublayer isKindOfClass:[TouchMask class]] || [sublayer isKindOfClass:[ItemMask class]]) {
             if([sublayer isHidden]) {
                 [sublayer setHidden:NO];
@@ -116,9 +116,9 @@
             }
         }
         else if ([sublayer isKindOfClass:[ItemMask class]]) {
-
+            
             ItemMask *shapeLayer = sublayer;
-
+            
             if (CGPathContainsPoint(shapeLayer.path, 0, firstPoint, YES)) {
                 NSLog(@"touchInItem %@", shapeLayer.identifier);
             }
