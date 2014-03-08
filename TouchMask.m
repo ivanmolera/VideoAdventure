@@ -28,7 +28,7 @@
         self.m_aCoords  = coords;
 
         UIBezierPath *path = [[UIBezierPath bezierPath] init];
-            
+        
         [path moveToPoint:[[coords objectAtIndex:0] CGPointValue]];
             
         for (NSValue *coord in coords) {
