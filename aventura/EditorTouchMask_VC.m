@@ -44,7 +44,7 @@
     [self.videoView.layer addSublayer:_movieLayer];
     
 	// Do any additional setup after loading the view.
-    m_aCoords       = [[NSMutableArray alloc] init];
+    m_aCoords       = nil;
     m_aTouchMasks   = [[NSMutableArray alloc] init];
     
     m_TouchMask_aux = NULL;
@@ -102,7 +102,7 @@
     {
         case State_StartNewMask:
         {
-            [m_aCoords removeAllObjects];
+            m_aCoords = [[NSMutableArray alloc] init];
             m_eState = State_WaitNextPoint;
         }
             break;
@@ -504,7 +504,7 @@
                 float xPercent = x / self.view.frame.size.width;
                 float yPercent = y / self.view.frame.size.height;
                 NewXML.WriteFloatProperty("posX", xPercent);
-                NewXML.WriteIntProperty("posY", yPercent);
+                NewXML.WriteFloatProperty("posY", yPercent);
                 NewXML.EndElement(); //Coords
                 step++;
             }
@@ -615,8 +615,8 @@
                                 {
                                     //<Coord step="0">522,602</Coord>
                                     CXMLTreeNode  coordTN = coordsTN(j);
-                                    int posX_precent = 0;
-                                    int posY_precent = 0;
+                                    float posX_precent = 0;
+                                    float posY_precent = 0;
                                     posX_precent = coordTN.GetFloatProperty("posX");
                                     posY_precent = coordTN.GetFloatProperty("posY");
                                     

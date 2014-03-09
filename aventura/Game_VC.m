@@ -196,8 +196,8 @@
                             {
                                 //<Coord step="0">522,602</Coord>
                                 CXMLTreeNode  coordTN = coordsTN(j);
-                                int posX_precent = 0;
-                                int posY_precent = 0;
+                                float posX_precent = 0;
+                                float posY_precent = 0;
                                 posX_precent = coordTN.GetFloatProperty("posX");
                                 posY_precent = coordTN.GetFloatProperty("posY");
                             
