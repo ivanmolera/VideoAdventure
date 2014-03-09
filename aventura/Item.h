@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "Escena.h"
 
+@class Inventory;
+
 @interface Item : NSObject
 
 @property (nonatomic, strong) NSString          *identifier;
@@ -18,5 +20,6 @@
 @property (nonatomic, strong) Escena            *escena;
 
 - (id) initWithIdentifier:(NSString *)identifier;
+- (void)withInventory:(Inventory *)inventari;
 
 @end

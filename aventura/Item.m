@@ -7,9 +7,18 @@
 //
 
 #import "Item.h"
+#import "Inventory.h"
 #import "TouchMask.h"
 
 @implementation Item
+{
+    Inventory* _inventari;
+}
+
+- (void)withInventory:(Inventory *)inventari
+{
+    _inventari = inventari;
+}
 
 - (id) initWithIdentifier:(NSString *)identifier {
     self = [super init];
@@ -42,7 +51,7 @@
 
 	// get the touch
 	UITouch *touch = [[event touchesForView:button] anyObject];
-    
+
 	// get delta
 	CGPoint previousLocation = [touch previousLocationInView:button];
 	CGPoint location = [touch locationInView:button];
@@ -61,6 +70,12 @@
 	CGPoint location = [touch locationInView:button];
     
     NSLog(@"%f = %f, %f = %f", previousLocation.x, location.x, previousLocation.y, location.y);
+    
+    NSLog(@"x = %f",self.button.center.y);
+    
+    if (self.button.center.y > 0) {
+        [_inventari ordenaItems];
+    }
 
     // touch mostro descripció
     if(abs(round(previousLocation.x - location.x)) <= 8 && abs(round(previousLocation.y - location.y)) <= 8) {

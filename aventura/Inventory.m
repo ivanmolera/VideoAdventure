@@ -35,6 +35,7 @@
 - (void) addItem:(Item*)item {
     [item.button setFrame:CGRectMake(([self.items count]*145)+([self.items count]*5)+5, 5, 140, 85)];
     [item setEscena:self.escena];
+    [item withInventory:self];
 
     [self.items addObject:item];
 
