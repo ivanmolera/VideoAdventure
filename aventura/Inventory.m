@@ -46,8 +46,8 @@
 }
 
 - (CGRect) getItemFrame:(Item*)item {
-    int index = [self.items indexOfObject:item];
-    int x = (index == 0) ? 5 : (index*145)+(index*5)+5;
+    NSUInteger index = [self.items indexOfObject:item];
+    NSUInteger x = (index == 0) ? 5 : (index*145)+(index*5)+5;
     return CGRectMake(x, 5, 140, 85);
 }
 

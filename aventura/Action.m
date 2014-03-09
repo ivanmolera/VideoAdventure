@@ -46,34 +46,30 @@
             // Espero que acabi un video per reproduir-ne un altre?
             //if(self.escena.moviePlayer.playbackState != MPMoviePlaybackStatePlaying)
                 [self.escena setCurrentEstat:[self.escena.m_aEstats objectAtIndex:self.target]];
+
             break;
             
         case ActionTypeJumpToScene:
+        {
+            // TODO:
+        }
             
             break;
         
         case ActionTypeShowMessage:
-        {
-            /*
-            CGRect myImageRect = CGRectMake(520, 150, 104, 32);
-            
-            UIImageView *boxImage = [[UIImageView alloc] initWithFrame:myImageRect];
-            [boxImage setImage:[UIImage imageNamed:@"box.png"]];
-            boxImage.opaque = YES;
-
-            [self.escena addSubview:boxImage];
-            */
-            
             [self.escena showMessage:self.message];
-        }
             break;
             
         case ActionTypeGetItem:
-            
+        {
+            // TODO:
+        }
             break;
             
         case ActionTypeUseItem:
-            
+        {
+            // TODO:
+        }
             break;
             
         default:
