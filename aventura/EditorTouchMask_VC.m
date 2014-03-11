@@ -688,7 +688,7 @@
     }
     
     
-    [cell setIndex:indexPath.row andController:self];
+    [cell setIndex:(int)indexPath.row andController:self];
     
     switch (m_eTypeTV_Editor) {
         case TV_Videos:
