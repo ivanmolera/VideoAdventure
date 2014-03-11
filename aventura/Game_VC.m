@@ -200,11 +200,10 @@
                                 float posY_precent = 0;
                                 posX_precent = coordTN.GetFloatProperty("posX");
                                 posY_precent = coordTN.GetFloatProperty("posY");
-                            
-                                // CANVIS IVAN
+                                
                                 float posX = (float)(posX_precent * self.view.frame.size.height);
-                                float posY = (float)(posY_precent * self.view.frame.size.height);
-                                // CANVIS IVAN
+                                float posY = (float)(posY_precent * self.view.frame.size.width);
+                                
                                 [coords addObject:[NSValue valueWithCGPoint:CGPointMake(posX, posY)]];
                             }
                             [masks addObject:[[TouchMask alloc ] initWithCoords:coords

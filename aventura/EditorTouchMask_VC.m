@@ -619,7 +619,8 @@
                                     float posY_precent = 0;
                                     posX_precent = coordTN.GetFloatProperty("posX");
                                     posY_precent = coordTN.GetFloatProperty("posY");
-                                    
+                                    int w = self.view.frame.size.width;
+                                    int h = self.view.frame.size.height;
                                     int posX = (int)(posX_precent * self.view.frame.size.width);
                                     int posY = (int)(posY_precent * self.view.frame.size.height);
                                     [coords addObject:[NSValue valueWithCGPoint:CGPointMake(posX, posY)]];
