@@ -13,9 +13,6 @@
 // Identificador de la màscara
 @property (nonatomic, strong) NSString          *identifier;
 
-// En quin estat mostro la màscara?
-@property (nonatomic, strong) NSMutableArray    *activeForStates;
-
 // Array de coordenades
 @property (nonatomic, strong) NSMutableArray    *m_aCoords;
 

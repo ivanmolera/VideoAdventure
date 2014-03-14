@@ -10,6 +10,7 @@
 #import "TouchMask.h"
 #import "Action.h"
 #import "Estat.h"
+#import "Item.h"
 
 @implementation Escena
 
@@ -65,6 +66,10 @@
         if ([i isKindOfClass:[UILabel class]] || [i isKindOfClass:[UIImageView class]]) {
             [i removeFromSuperview];
         }
+        else if ([i isKindOfClass:[UIButton class]] || [i isKindOfClass:[Item class]]) {
+            //NSLog(@"button:%f,%f",i.center.x, i.center.y);
+            [i removeFromSuperview];
+        }
     }
 }
 
@@ -82,6 +87,11 @@
     [messageLabel setNumberOfLines:0];
     
     [self addSubview:messageLabel];
+}
+
+- (void) showItem:(UIButton*)button {
+    [self addSubview:button];
+    [self bringSubviewToFront:button];
 }
 
 @end

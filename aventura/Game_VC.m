@@ -91,6 +91,8 @@
     CGPoint firstPoint  = [[self.beginTouchPoints objectAtIndex:0] CGPointValue];
     //CGPoint secondPoint = [[self.endTouchPoints objectAtIndex:0] CGPointValue];
     
+    BOOL touchInsideMask = NO;
+    
     for (id sublayer in currentEscena.layer.sublayers) {
         
         if ([sublayer isKindOfClass:[TouchMask class]]) {
@@ -114,10 +116,14 @@
                     }
                 }
                 
+                touchInsideMask = YES;
+                
                 break;
             }
         }
     }
+    
+    if(!touchInsideMask) [currentEscena removeLabelsFromEscena];
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -275,6 +281,7 @@
                         {
                             const char* _message    = actionTN.GetPszProperty("message");
                             NSString* message       = [NSString stringWithUTF8String:_message];
+                            action.m_iType          = ActionTypeGetItem;
                             action.message          = message;
                             int target = 0;
                             target                  = actionTN.GetIntProperty("target");

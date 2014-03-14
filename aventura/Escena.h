@@ -37,7 +37,9 @@
 - (id) initWithIdentifier:(NSString *)identifier andFrame:(CGRect)frame;
 - (void) setCurrentEstat:(Estat*)estat;
 - (void) setMasks:(NSMutableArray *)bezierPaths;
+
 - (void) removeLabelsFromEscena;
 - (void) showMessage:(NSString*)localizedString;
+- (void) showItem:(UIButton*)button;
 
 @end

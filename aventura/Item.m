@@ -25,12 +25,14 @@
     if (self) {
         // Initialization code
         self.identifier     = identifier;
-        self.description    = NSLocalizedString(identifier, nil);
+        
+        NSString *txt = [NSString stringWithFormat:@"item%@", identifier];
+        self.description    = NSLocalizedString(txt, nil);
 
-        UIImage *imatge     = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", identifier]];
+        UIImage *imatge     = [UIImage imageNamed:[NSString stringWithFormat:@"item%@.png", identifier]];
         self.button = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.button setBackgroundImage:imatge forState:UIControlStateNormal];
-        
+
         [self.button.layer setCornerRadius:10.0f];
         [self.button.layer setMasksToBounds:YES];
         
@@ -47,8 +49,6 @@
 
 - (void)wasDragged:(UIButton *)button withEvent:(UIEvent *)event
 {
-    [self.escena removeLabelsFromEscena];
-
 	// get the touch
 	UITouch *touch = [[event touchesForView:button] anyObject];
 

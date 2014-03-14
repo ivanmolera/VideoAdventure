@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Escena id="0">
-        <TouchMasks><TouchMask id="1"><Coords><Coord step="0" posX="0.519531" posY="0.772135"/><Coord step="1" posX="0.503906" posY="0.832031"/><Coord step="2" posX="0.538086" posY="0.854167"/><Coord step="3" posX="0.591797" posY="0.804688"/><Coord step="4" posX="0.558594" posY="0.769531"/><Coord step="5" posX="0.542969" posY="0.773438"/><Coord step="6" posX="0.542969" posY="0.773438"/></Coords></TouchMask><TouchMask id="2"><Coords><Coord step="0" posX="0.554688" posY="0.675781"/><Coord step="1" posX="0.549805" posY="0.718750"/><Coord step="2" posX="0.552734" posY="0.764323"/><Coord step="3" posX="0.575195" posY="0.782552"/><Coord step="4" posX="0.567383" posY="0.850260"/><Coord step="5" posX="0.549805" posY="0.873698"/><Coord step="6" posX="0.606445" posY="0.877604"/><Coord step="7" posX="0.591797" posY="0.848958"/><Coord step="8" posX="0.591797" posY="0.770833"/><Coord step="9" posX="0.621094" posY="0.751302"/><Coord step="10" posX="0.621094" posY="0.677083"/><Coord step="11" posX="0.592773" posY="0.670573"/><Coord step="12" posX="0.581055" posY="0.675781"/><Coord step="13" posX="0.581055" posY="0.675781"/></Coords></TouchMask><TouchMask id="3"><Coords><Coord step="0" posX="0.781250" posY="0.790365"/><Coord step="1" posX="0.750000" posY="0.848958"/><Coord step="2" posX="0.762695" posY="0.876302"/><Coord step="3" posX="0.814453" posY="0.878906"/><Coord step="4" posX="0.921875" posY="0.869792"/><Coord step="5" posX="0.928711" posY="0.644531"/><Coord step="6" posX="0.915039" posY="0.613281"/><Coord step="7" posX="0.909180" posY="0.537760"/><Coord step="8" posX="0.890625" posY="0.533854"/><Coord step="9" posX="0.890625" posY="0.609375"/><Coord step="10" posX="0.872070" posY="0.639323"/><Coord step="11" posX="0.856445" posY="0.842448"/><Coord step="12" posX="0.813477" posY="0.819010"/><Coord step="13" posX="0.813477" posY="0.819010"/></Coords></TouchMask><TouchMask id="4"><Coords><Coord step="0" posX="0.666016" posY="0.290365"/><Coord step="1" posX="0.646484" posY="0.381510"/><Coord step="2" posX="0.663086" posY="0.442708"/><Coord step="3" posX="0.696289" posY="0.453125"/><Coord step="4" posX="0.754883" posY="0.446615"/><Coord step="5" posX="0.785156" posY="0.375000"/><Coord step="6" posX="0.780273" posY="0.286458"/><Coord step="7" posX="0.750977" posY="0.239583"/><Coord step="8" posX="0.706055" posY="0.235677"/><Coord step="9" posX="0.682617" posY="0.248698"/><Coord step="10" posX="0.682617" posY="0.248698"/></Coords></TouchMask></TouchMasks>
+    <TouchMasks>
+        <TouchMask id="1"><Coords><Coord step="0" posX="0.519531" posY="0.772135"/><Coord step="1" posX="0.503906" posY="0.832031"/><Coord step="2" posX="0.538086" posY="0.854167"/><Coord step="3" posX="0.591797" posY="0.804688"/><Coord step="4" posX="0.558594" posY="0.769531"/><Coord step="5" posX="0.542969" posY="0.773438"/><Coord step="6" posX="0.542969" posY="0.773438"/></Coords>
+        </TouchMask>
+        <TouchMask id="2"><Coords><Coord step="0" posX="0.554688" posY="0.675781"/><Coord step="1" posX="0.549805" posY="0.718750"/><Coord step="2" posX="0.552734" posY="0.764323"/><Coord step="3" posX="0.575195" posY="0.782552"/><Coord step="4" posX="0.567383" posY="0.850260"/><Coord step="5" posX="0.549805" posY="0.873698"/><Coord step="6" posX="0.606445" posY="0.877604"/><Coord step="7" posX="0.591797" posY="0.848958"/><Coord step="8" posX="0.591797" posY="0.770833"/><Coord step="9" posX="0.621094" posY="0.751302"/><Coord step="10" posX="0.621094" posY="0.677083"/><Coord step="11" posX="0.592773" posY="0.670573"/><Coord step="12" posX="0.581055" posY="0.675781"/><Coord step="13" posX="0.581055" posY="0.675781"/></Coords>
+        </TouchMask>
+        <TouchMask id="3"><Coords><Coord step="0" posX="0.781250" posY="0.790365"/><Coord step="1" posX="0.750000" posY="0.848958"/><Coord step="2" posX="0.762695" posY="0.876302"/><Coord step="3" posX="0.814453" posY="0.878906"/><Coord step="4" posX="0.921875" posY="0.869792"/><Coord step="5" posX="0.928711" posY="0.644531"/><Coord step="6" posX="0.915039" posY="0.613281"/><Coord step="7" posX="0.909180" posY="0.537760"/><Coord step="8" posX="0.890625" posY="0.533854"/><Coord step="9" posX="0.890625" posY="0.609375"/><Coord step="10" posX="0.872070" posY="0.639323"/><Coord step="11" posX="0.856445" posY="0.842448"/><Coord step="12" posX="0.813477" posY="0.819010"/><Coord step="13" posX="0.813477" posY="0.819010"/></Coords>
+        </TouchMask>
+        <TouchMask id="4"><Coords><Coord step="0" posX="0.666016" posY="0.290365"/><Coord step="1" posX="0.646484" posY="0.381510"/><Coord step="2" posX="0.663086" posY="0.442708"/><Coord step="3" posX="0.696289" posY="0.453125"/><Coord step="4" posX="0.754883" posY="0.446615"/><Coord step="5" posX="0.785156" posY="0.375000"/><Coord step="6" posX="0.780273" posY="0.286458"/><Coord step="7" posX="0.750977" posY="0.239583"/><Coord step="8" posX="0.706055" posY="0.235677"/><Coord step="9" posX="0.682617" posY="0.248698"/><Coord step="10" posX="0.682617" posY="0.248698"/></Coords>
+        </TouchMask>
+        <TouchMask id="5">
+            <Coords>
+                <Coord step="0" posX="0.310547" posY="0.346354"/>
+                <Coord step="1" posX="0.348633" posY="0.320312"/>
+                <Coord step="2" posX="0.369141" posY="0.272135"/>
+                <Coord step="3" posX="0.346680" posY="0.255208"/>
+                <Coord step="4" posX="0.316406" posY="0.208333"/>
+                <Coord step="5" posX="0.264648" posY="0.194010"/>
+                <Coord step="6" posX="0.200195" posY="0.201823"/>
+                <Coord step="7" posX="0.178711" posY="0.226562"/>
+                <Coord step="8" posX="0.165039" posY="0.264323"/>
+                <Coord step="9" posX="0.172852" posY="0.296875"/>
+                <Coord step="10" posX="0.220703" posY="0.332031"/>
+                <Coord step="11" posX="0.237305" posY="0.361979"/>
+                <Coord step="12" posX="0.264648" posY="0.373698"/>
+                <Coord step="13" posX="0.277344" posY="0.334635"/>
+                <Coord step="14" posX="0.277344" posY="0.334635"/>
+            </Coords>
+        </TouchMask>
+    </TouchMasks>
     
     <Actions>
         <Action id="1" type="jumpToState" target="0">
@@ -38,6 +66,10 @@
         <Action id="9" type="showMessage" message="txt_msg_0001">
             <TouchMask id="4"/>
         </Action>
+
+        <Action id="10" type="getItem" target="1" message="txt_getItem_0001">
+            <TouchMask id="5"/>
+        </Action>
     </Actions>
     
     
@@ -46,6 +78,7 @@
             <Action id="1"/>
             <Action id="2"/>
             <Action id="9"/>
+            <Action id="10"/>
         </Estat>
         
 		<Estat id="1" videoURL="AG_0002">
@@ -57,6 +90,7 @@
             <Action id="1"/>
             <Action id="2"/>
             <Action id="9"/>
+            <Action id="10"/>
         </Estat>
         
 		<Estat id="3" videoURL="AG_0004">
@@ -83,6 +117,7 @@
 			<Action id="1"/>
             <Action id="2"/>
             <Action id="9"/>
+            <Action id="10"/>
 		</Estat>
 	</Estats>
     

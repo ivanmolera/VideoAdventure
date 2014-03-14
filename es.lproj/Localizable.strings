@@ -9,6 +9,8 @@
 "txt_msg_0001" = "Hola...";
 "txt_msg_0002" = "Spanish. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, erat at mollis tempus, arcu lectus ultrices enim, id scelerisque elit justo vel ligula.";
 
-"item0001" = "Flor";
-"item0002" = "Copa";
-"item0003" = "Botella de vino";
+"item1" = "Flor";
+"item2" = "Copa";
+"item3" = "Botella de vino";
+
+"txt_getItem_0001" = "¿Coger esa bonita flor?";
