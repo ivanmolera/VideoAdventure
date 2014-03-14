@@ -66,6 +66,7 @@
             [self.escena showMessage:self.message];
             
             Item *newItem = [[Item alloc] initWithIdentifier:[NSString stringWithFormat:@"%d", self.target]];
+            [newItem setEscena:self.escena];
             
             // En una action getItem només tindré una màscara
             TouchMask *touchMask = [self.m_aTouchMasks objectAtIndex:0];

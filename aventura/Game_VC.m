@@ -92,7 +92,9 @@
     //CGPoint secondPoint = [[self.endTouchPoints objectAtIndex:0] CGPointValue];
     
     BOOL touchInsideMask = NO;
-    
+
+    [self.inventory ordenaItems];
+
     for (id sublayer in currentEscena.layer.sublayers) {
         
         if ([sublayer isKindOfClass:[TouchMask class]]) {
@@ -109,8 +111,6 @@
                     bool canDoAction = [action check:shapeLayer.identifier];
 
                     if(canDoAction) {
-                        [self.inventory ordenaItems];
-
                         NSLog(@"Action %@", action.identifier);
                         [action doAction];
                     }
@@ -123,7 +123,9 @@
         }
     }
     
-    if(!touchInsideMask) [currentEscena removeLabelsFromEscena];
+    if(!touchInsideMask) {
+        [currentEscena removeLabelsFromEscena];
+    }
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

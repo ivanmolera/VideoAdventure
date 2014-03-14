@@ -41,8 +41,7 @@
 
     [self addSubview:item.button];
     [self bringSubviewToFront:item.button];
-    
-    //[self setContentSize:CGSizeMake(([self.items count]*140)+([self.items count]*5)+5, [self bounds].size.height)];
+
     [self setContentSize:CGSizeMake(([self.items count]*140)+([self.items count]*5)+5,[self bounds].size.height)];
 }
 
