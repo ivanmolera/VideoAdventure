@@ -48,7 +48,6 @@ typedef enum {
 // Properties de la action
 @property (nonatomic, assign) int               target;
 @property (nonatomic, assign) int               nextState;
-@property (nonatomic, assign) BOOL              repeatMode;
 @property (nonatomic, assign) AGActionPlayMode  playMode;
 @property (nonatomic, strong) NSString          *message;
 @property (nonatomic, strong) NSString          *playSound;

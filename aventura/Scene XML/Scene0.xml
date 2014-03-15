@@ -74,7 +74,7 @@
     
     
 	<Estats>
-        <Estat id="0" videoURL="AG_0001">
+        <Estat id="0" videoURL="AG_0001" repeatMode="true">
             <Action id="1"/>
             <Action id="2"/>
             <Action id="9"/>

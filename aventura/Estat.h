@@ -19,6 +19,8 @@
 // Array d'accions
 @property (nonatomic, strong) NSMutableArray            *m_aActions;
 
+@property (nonatomic, assign) BOOL                      repeatMode;
+
 
 - (id) initWithIdentifier:(NSString *)identifier;
 

@@ -253,8 +253,6 @@
                             action.m_iType          = ActionTypeJumpToState;
                             const char* _sound      = actionTN.GetPszProperty("playSound", "");
                             action.playSound        = [NSString stringWithUTF8String:_sound];
-                            int _repeatMode         = actionTN.GetIntProperty("repeatMode");
-                            action.repeatMode       = (_repeatMode == 1);
                             const char* _playMode   = actionTN.GetPszProperty("playMode", "");
                             NSString* playMode      = [NSString stringWithUTF8String:_playMode];
                             if ([playMode isEqualToString:@"normal"])
@@ -332,6 +330,15 @@
                         NSString* videoURL      = [NSString stringWithUTF8String:_videoURL];
                         
                         estat.m_sVideoURL = videoURL;
+                        
+                        const char* _repeatMode = estatTN.GetPszProperty("repeatMode");
+                        if(_repeatMode != NULL) {
+                            NSString* repeatMode = [NSString stringWithUTF8String:_repeatMode];
+                            estat.repeatMode = [repeatMode boolValue];
+                        }
+                        else {
+                            estat.repeatMode = NO;
+                        }
                         
                         NSMutableArray *actions_aux = [[NSMutableArray alloc] init];
                         int count2 = estatTN.GetNumChildren();

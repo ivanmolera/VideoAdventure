@@ -56,8 +56,38 @@
     
     [_moviePlayer replaceCurrentItemWithPlayerItem:movieItem];
     
+    // REPEAT MODE
+    if(estat.repeatMode) {
+        _moviePlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
+    
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(repeat:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:movieItem];
+    }
+    
+    /* REVERSE MODE: no va
+     
+     [movieItem reversePlaybackEndTime];
+     
+     CMTime durTime = movieItem.asset.duration;
+     //float durationTime = CMTimeGetSeconds(durTime);
+     
+     if (CMTIME_IS_VALID(durTime)) {
+     [_moviePlayer seekToTime:durTime];
+     [_moviePlayer setRate:_moviePlayer.rate*(-1)];
+     }
+     else
+     NSLog(@"Invalid time");
+     */
+    
     [_movieLayer setPlayer:_moviePlayer];
     [_moviePlayer play];
+}
+
+- (void)repeat:(NSNotification *)notification {
+    AVPlayerItem *p = [notification object];
+    [p seekToTime:kCMTimeZero];
 }
 
 - (void) removeLabelsFromEscena {

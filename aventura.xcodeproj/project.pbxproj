@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032923EA18D4522E006BEE51 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923E918D4522E006BEE51 /* CoreFoundation.framework */; };
+		032923EC18D45238006BEE51 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923EB18D45238006BEE51 /* CoreMedia.framework */; };
 		0348ECB218C7A62C00C69934 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECB118C7A62C00C69934 /* Inventory.m */; };
 		0348ECDD18C7CB7E00C69934 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECDC18C7CB7E00C69934 /* Item.m */; };
 		0348ECE118C7CDC800C69934 /* item1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0348ECDE18C7CDC800C69934 /* item1.png */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032923E918D4522E006BEE51 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		032923EB18D45238006BEE51 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		0348ECB018C7A62C00C69934 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
 		0348ECB118C7A62C00C69934 /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
 		0348ECDB18C7CB7E00C69934 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = aventura/Item.h; sourceTree = SOURCE_ROOT; };
@@ -133,6 +137,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				032923EC18D45238006BEE51 /* CoreMedia.framework in Frameworks */,
+				032923EA18D4522E006BEE51 /* CoreFoundation.framework in Frameworks */,
 				C73868FE18C7666A0093A0AC /* MessageUI.framework in Frameworks */,
 				03C9262F18C5291800612E83 /* AVFoundation.framework in Frameworks */,
 				C73BC13318C4CAF100C46E86 /* QuartzCore.framework in Frameworks */,
@@ -181,6 +187,8 @@
 		03722BBB18AAC73300B2EEBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				032923EB18D45238006BEE51 /* CoreMedia.framework */,
+				032923E918D4522E006BEE51 /* CoreFoundation.framework */,
 				C73868FD18C7666A0093A0AC /* MessageUI.framework */,
 				03C9262D18C5235000612E83 /* AVFoundation.framework */,
 				C73BC13218C4CAF100C46E86 /* QuartzCore.framework */,

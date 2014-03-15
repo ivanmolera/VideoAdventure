@@ -44,10 +44,11 @@
 
     switch (self.m_iType) {
         case ActionTypeJumpToState:
+        {
             // Espero que acabi un video per reproduir-ne un altre?
             //if(self.escena.moviePlayer.playbackState != MPMoviePlaybackStatePlaying)
                 [self.escena setCurrentEstat:[self.escena.m_aEstats objectAtIndex:self.target]];
-
+        }
             break;
             
         case ActionTypeJumpToScene:
