@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0323742C18D4B9B6008EC070 /* AG2_0001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923EF18D465A4006BEE51 /* AG2_0001.mp4 */; };
+		0323742D18D4B9B6008EC070 /* AG2_0002.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F018D465A4006BEE51 /* AG2_0002.mp4 */; };
+		0323742E18D4B9B6008EC070 /* AG2_0003.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F118D465A4006BEE51 /* AG2_0003.mp4 */; };
+		0323742F18D4B9B6008EC070 /* AG2_0004.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F218D465A4006BEE51 /* AG2_0004.mp4 */; };
+		0323743018D4B9B6008EC070 /* AG2_0005.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F318D465A4006BEE51 /* AG2_0005.mp4 */; };
+		0323743118D4B9B6008EC070 /* AG2_0006.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F418D465A4006BEE51 /* AG2_0006.mp4 */; };
+		0323743218D4B9B6008EC070 /* AG2_0007.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F518D465A4006BEE51 /* AG2_0007.mp4 */; };
+		0323743318D4B9B6008EC070 /* AG2_0008.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F618D465A4006BEE51 /* AG2_0008.mp4 */; };
+		0323743418D4B9B6008EC070 /* AG2_0009.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F718D465A4006BEE51 /* AG2_0009.mp4 */; };
+		0323743518D4B9B6008EC070 /* AG2_0010.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F818D465A4006BEE51 /* AG2_0010.mp4 */; };
+		0323743618D4B9B6008EC070 /* AG2_0011.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F918D465A4006BEE51 /* AG2_0011.mp4 */; };
 		032923EA18D4522E006BEE51 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923E918D4522E006BEE51 /* CoreFoundation.framework */; };
 		032923EC18D45238006BEE51 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923EB18D45238006BEE51 /* CoreMedia.framework */; };
 		0348ECB218C7A62C00C69934 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECB118C7A62C00C69934 /* Inventory.m */; };
@@ -466,6 +477,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0323742C18D4B9B6008EC070 /* AG2_0001.mp4 in Resources */,
+				0323742D18D4B9B6008EC070 /* AG2_0002.mp4 in Resources */,
+				0323742E18D4B9B6008EC070 /* AG2_0003.mp4 in Resources */,
+				0323742F18D4B9B6008EC070 /* AG2_0004.mp4 in Resources */,
+				0323743018D4B9B6008EC070 /* AG2_0005.mp4 in Resources */,
+				0323743118D4B9B6008EC070 /* AG2_0006.mp4 in Resources */,
+				0323743218D4B9B6008EC070 /* AG2_0007.mp4 in Resources */,
+				0323743318D4B9B6008EC070 /* AG2_0008.mp4 in Resources */,
+				0323743418D4B9B6008EC070 /* AG2_0009.mp4 in Resources */,
+				0323743518D4B9B6008EC070 /* AG2_0010.mp4 in Resources */,
+				0323743618D4B9B6008EC070 /* AG2_0011.mp4 in Resources */,
 				03DAA8BC18BD14A100A2A19A /* Laffayette_Comic_Pro.ttf in Resources */,
 				03722BFE18AACEBA00B2EEBC /* AG_0001.mp4 in Resources */,
 				03722BFF18AACEBA00B2EEBC /* AG_0002.mp4 in Resources */,
