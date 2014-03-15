@@ -54,8 +54,6 @@
     AVURLAsset *movieOneItemAsset = [AVURLAsset URLAssetWithURL:movieUrl options:nil];
     AVPlayerItem *movieItem = [AVPlayerItem playerItemWithAsset:movieOneItemAsset];
     
-    [_moviePlayer replaceCurrentItemWithPlayerItem:movieItem];
-    
     // REPEAT MODE
     if(estat.repeatMode) {
         _moviePlayer.actionAtItemEnd = AVPlayerActionAtItemEndNone;
@@ -81,6 +79,7 @@
      NSLog(@"Invalid time");
      */
     
+    [_moviePlayer replaceCurrentItemWithPlayerItem:movieItem];
     [_movieLayer setPlayer:_moviePlayer];
     [_moviePlayer play];
 }
