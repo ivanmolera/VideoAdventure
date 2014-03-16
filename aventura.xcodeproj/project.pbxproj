@@ -18,6 +18,7 @@
 		0323743418D4B9B6008EC070 /* AG2_0009.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F718D465A4006BEE51 /* AG2_0009.mp4 */; };
 		0323743518D4B9B6008EC070 /* AG2_0010.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F818D465A4006BEE51 /* AG2_0010.mp4 */; };
 		0323743618D4B9B6008EC070 /* AG2_0011.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F918D465A4006BEE51 /* AG2_0011.mp4 */; };
+		0323743818D5999F008EC070 /* Scene1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0323743718D5999F008EC070 /* Scene1.xml */; };
 		032923EA18D4522E006BEE51 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923E918D4522E006BEE51 /* CoreFoundation.framework */; };
 		032923EC18D45238006BEE51 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923EB18D45238006BEE51 /* CoreMedia.framework */; };
 		0348ECB218C7A62C00C69934 /* Inventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0348ECB118C7A62C00C69934 /* Inventory.m */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0323743718D5999F008EC070 /* Scene1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scene1.xml; sourceTree = "<group>"; };
 		032923E918D4522E006BEE51 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		032923EB18D45238006BEE51 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		032923EF18D465A4006BEE51 /* AG2_0001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0001.mp4; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 		C7F6087E18C4F60500E03078 /* Scene XML */ = {
 			isa = PBXGroup;
 			children = (
+				0323743718D5999F008EC070 /* Scene1.xml */,
 				C7A8CBDF18CA58140048E337 /* Invetory.xml */,
 				C7F6087F18C4F60500E03078 /* Scene0.xml */,
 			);
@@ -485,6 +488,7 @@
 				0323743118D4B9B6008EC070 /* AG2_0006.mp4 in Resources */,
 				0323743218D4B9B6008EC070 /* AG2_0007.mp4 in Resources */,
 				0323743318D4B9B6008EC070 /* AG2_0008.mp4 in Resources */,
+				0323743818D5999F008EC070 /* Scene1.xml in Resources */,
 				0323743418D4B9B6008EC070 /* AG2_0009.mp4 in Resources */,
 				0323743518D4B9B6008EC070 /* AG2_0010.mp4 in Resources */,
 				0323743618D4B9B6008EC070 /* AG2_0011.mp4 in Resources */,
