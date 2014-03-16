@@ -1,82 +1,54 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <Escena id="0">
     <TouchMasks>
-		<TouchMask id="1">
-			<Coords>
-				<Coord step="0" posX="0.434570" posY="0.839844"/>
-				<Coord step="1" posX="0.535156" posY="0.851562"/>
-				<Coord step="2" posX="0.618164" posY="0.835938"/>
-				<Coord step="3" posX="0.604492" posY="0.730469"/>
-				<Coord step="4" posX="0.528320" posY="0.726562"/>
-				<Coord step="5" posX="0.459961" posY="0.743490"/>
-				<Coord step="6" posX="0.449219" posY="0.786458"/>
-				<Coord step="7" posX="0.449219" posY="0.786458"/>
-			</Coords>
-		</TouchMask>
-		<TouchMask id="2">
-			<Coords>
-				<Coord step="0" posX="0.636719" posY="0.760417"/>
-				<Coord step="1" posX="0.645508" posY="0.833333"/>
-				<Coord step="2" posX="0.698242" posY="0.824219"/>
-				<Coord step="3" posX="0.674805" posY="0.751302"/>
-				<Coord step="4" posX="0.674805" posY="0.751302"/>
-			</Coords>
-		</TouchMask>
-		<TouchMask id="3">
-			<Coords>
-				<Coord step="0" posX="0.644531" posY="0.128906"/>
-				<Coord step="1" posX="0.673828" posY="0.641927"/>
-				<Coord step="2" posX="0.677734" posY="0.673177"/>
-				<Coord step="3" posX="0.797852" posY="0.652344"/>
-				<Coord step="4" posX="0.776367" posY="0.138021"/>
-				<Coord step="5" posX="0.776367" posY="0.138021"/>
-			</Coords>
-		</TouchMask>
-		<TouchMask id="4">
-			<Coords>
-				<Coord step="0" posX="0.333984" posY="0.291667"/>
-				<Coord step="1" posX="0.342773" posY="0.481771"/>
-				<Coord step="2" posX="0.341797" posY="0.488281"/>
-				<Coord step="3" posX="0.602539" posY="0.463542"/>
-				<Coord step="4" posX="0.592773" posY="0.260417"/>
-				<Coord step="5" posX="0.592773" posY="0.260417"/>
-			</Coords>
-		</TouchMask>
-		<TouchMask id="5">
-			<Coords>
-				<Coord step="0" posX="0.606445" posY="0.576823"/>
-				<Coord step="1" posX="0.571289" posY="0.699219"/>
-				<Coord step="2" posX="0.623047" posY="0.757812"/>
-				<Coord step="3" posX="0.708984" posY="0.740885"/>
-				<Coord step="4" posX="0.681641" posY="0.649740"/>
-				<Coord step="5" posX="0.651367" posY="0.576823"/>
-				<Coord step="6" posX="0.651367" posY="0.576823"/>
-			</Coords>
-		</TouchMask>
-		<TouchMask id="6">
-			<Coords>
-				<Coord step="0" posX="0.575195" posY="0.217448"/>
-				<Coord step="1" posX="0.825195" posY="0.217448"/>
-				<Coord step="2" posX="0.825195" posY="0.807292"/>
-				<Coord step="3" posX="0.575195" posY="0.807292"/>
-			</Coords>
-		</TouchMask>
-		<TouchMask id="7">
-			<Coords>
-				<Coord step="0" posX="0.863281" posY="0.136719"/>
-				<Coord step="1" posX="0.998047" posY="0.136719"/>
-				<Coord step="2" posX="0.998047" posY="0.856771"/>
-				<Coord step="3" posX="0.863281" posY="0.856771"/>
-			</Coords>
-		</TouchMask>
-		<TouchMask id="8">
-			<Coords>
-				<Coord step="0" posX="0.014648" posY="0.166667"/>
-				<Coord step="1" posX="0.236328" posY="0.166667"/>
-				<Coord step="2" posX="0.236328" posY="0.843750"/>
-				<Coord step="3" posX="0.014648" posY="0.843750"/>
-			</Coords>
-		</TouchMask>
+        <TouchMask id="1">
+            <Coords>
+                <Coord step="0" posX="0.385742" posY="0.596354"/>
+                <Coord step="1" posX="0.373047" posY="0.691406"/>
+                <Coord step="2" posX="0.434570" posY="0.705729"/>
+                <Coord step="3" posX="0.515625" posY="0.701823"/>
+                <Coord step="4" posX="0.560547" posY="0.688802"/>
+                <Coord step="5" posX="0.532227" posY="0.593750"/>
+                <Coord step="6" posX="0.462891" posY="0.578125"/>
+                <Coord step="7" posX="0.462891" posY="0.578125"/>
+            </Coords>
+        </TouchMask>
+        <TouchMask id="2">
+            <Coords>
+                <Coord step="0" posX="0.566406" posY="0.635417"/>
+                <Coord step="1" posX="0.579102" posY="0.712240"/>
+                <Coord step="2" posX="0.635742" posY="0.701823"/>
+                <Coord step="3" posX="0.606445" posY="0.628906"/>
+                <Coord step="4" posX="0.606445" posY="0.628906"/>
+            </Coords>
+        </TouchMask>
+        <TouchMask id="3">
+            <Coords>
+                <Coord step="0" posX="0.599609" posY="0.122396"/>
+                <Coord step="1" posX="0.587891" posY="0.588542"/>
+                <Coord step="2" posX="0.792969" posY="0.598958"/>
+                <Coord step="3" posX="0.788086" posY="0.111979"/>
+                <Coord step="5" posX="0.681641" posY="0.110677"/>
+                <Coord step="6" posX="0.681641" posY="0.110677"/>
+            </Coords>
+        </TouchMask>
+        <TouchMask id="4">
+            <Coords>
+                <Coord step="0" posX="0.281250" posY="0.122396"/>
+                <Coord step="1" posX="0.269531" posY="0.395833"/>
+                <Coord step="2" posX="0.582031" posY="0.402344"/>
+                <Coord step="3" posX="0.582031" posY="0.122396"/>
+                <Coord step="4" posX="0.582031" posY="0.122396"/>
+            </Coords>
+        </TouchMask>
+        <TouchMask id="5">
+            <Coords>
+                <Coord step="0" posX="0.860352" posY="0.118490"/>
+                <Coord step="1" posX="0.996094" posY="0.118490"/>
+                <Coord step="2" posX="0.996094" posY="0.856771"/>
+                <Coord step="3" posX="0.860352" posY="0.856771"/>
+            </Coords>
+        </TouchMask>
     </TouchMasks>
     
     <Actions>
@@ -93,11 +65,11 @@
         </Action>
         
         <Action id="4" type="jumpToState" target="4">
-            <TouchMask id="5"/>
+            <TouchMask id="3"/>
         </Action>
         
         <Action id="5" type="jumpToState" target="5">
-            <TouchMask id="7"/>
+            <TouchMask id="5"/>
         </Action>
         
         <Action id="6" type="jumpToState" target="6">
@@ -126,8 +98,9 @@
 		</Estat>
         
         <Estat id="2" videoURL="AG2_0003">
-			<Action id="1"/>
+            <Action id="1"/>
             <Action id="3"/>
+            <Action id="6"/>
 		</Estat>
         
         <Estat id="3" videoURL="AG2_0007">
@@ -140,6 +113,8 @@
 
         <Estat id="5" videoURL="AG2_0011">
             <Action id="1"/>
+            <Action id="3"/>
+            <Action id="6"/>
         </Estat>
         
         <Estat id="6" videoURL="AG2_0004">
@@ -151,7 +126,9 @@
         </Estat>
         
         <Estat id="8" videoURL="AG2_0006">
-            <Action id="8"/>
+            <Action id="1"/>
+            <Action id="3"/>
+            <Action id="6"/>
         </Estat>
 	</Estats>
     
