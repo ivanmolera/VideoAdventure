@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0323742C18D4B9B6008EC070 /* AG2_0001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923EF18D465A4006BEE51 /* AG2_0001.mp4 */; };
-		0323742D18D4B9B6008EC070 /* AG2_0002.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F018D465A4006BEE51 /* AG2_0002.mp4 */; };
-		0323742E18D4B9B6008EC070 /* AG2_0003.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F118D465A4006BEE51 /* AG2_0003.mp4 */; };
-		0323742F18D4B9B6008EC070 /* AG2_0004.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F218D465A4006BEE51 /* AG2_0004.mp4 */; };
-		0323743018D4B9B6008EC070 /* AG2_0005.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F318D465A4006BEE51 /* AG2_0005.mp4 */; };
-		0323743118D4B9B6008EC070 /* AG2_0006.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F418D465A4006BEE51 /* AG2_0006.mp4 */; };
-		0323743218D4B9B6008EC070 /* AG2_0007.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F518D465A4006BEE51 /* AG2_0007.mp4 */; };
-		0323743318D4B9B6008EC070 /* AG2_0008.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F618D465A4006BEE51 /* AG2_0008.mp4 */; };
-		0323743418D4B9B6008EC070 /* AG2_0009.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F718D465A4006BEE51 /* AG2_0009.mp4 */; };
-		0323743518D4B9B6008EC070 /* AG2_0010.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F818D465A4006BEE51 /* AG2_0010.mp4 */; };
-		0323743618D4B9B6008EC070 /* AG2_0011.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 032923F918D465A4006BEE51 /* AG2_0011.mp4 */; };
 		0323743818D5999F008EC070 /* Scene1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0323743718D5999F008EC070 /* Scene1.xml */; };
 		032923EA18D4522E006BEE51 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923E918D4522E006BEE51 /* CoreFoundation.framework */; };
 		032923EC18D45238006BEE51 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032923EB18D45238006BEE51 /* CoreMedia.framework */; };
@@ -81,17 +70,6 @@
 		0323743718D5999F008EC070 /* Scene1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scene1.xml; sourceTree = "<group>"; };
 		032923E918D4522E006BEE51 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		032923EB18D45238006BEE51 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		032923EF18D465A4006BEE51 /* AG2_0001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0001.mp4; sourceTree = "<group>"; };
-		032923F018D465A4006BEE51 /* AG2_0002.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0002.mp4; sourceTree = "<group>"; };
-		032923F118D465A4006BEE51 /* AG2_0003.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0003.mp4; sourceTree = "<group>"; };
-		032923F218D465A4006BEE51 /* AG2_0004.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0004.mp4; sourceTree = "<group>"; };
-		032923F318D465A4006BEE51 /* AG2_0005.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0005.mp4; sourceTree = "<group>"; };
-		032923F418D465A4006BEE51 /* AG2_0006.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0006.mp4; sourceTree = "<group>"; };
-		032923F518D465A4006BEE51 /* AG2_0007.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0007.mp4; sourceTree = "<group>"; };
-		032923F618D465A4006BEE51 /* AG2_0008.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0008.mp4; sourceTree = "<group>"; };
-		032923F718D465A4006BEE51 /* AG2_0009.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0009.mp4; sourceTree = "<group>"; };
-		032923F818D465A4006BEE51 /* AG2_0010.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0010.mp4; sourceTree = "<group>"; };
-		032923F918D465A4006BEE51 /* AG2_0011.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AG2_0011.mp4; sourceTree = "<group>"; };
 		0348ECB018C7A62C00C69934 /* Inventory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory.h; sourceTree = "<group>"; };
 		0348ECB118C7A62C00C69934 /* Inventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory.m; sourceTree = "<group>"; };
 		0348ECDB18C7CB7E00C69934 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Item.h; path = aventura/Item.h; sourceTree = SOURCE_ROOT; };
@@ -226,17 +204,6 @@
 				038D004918D5C096007E32EC /* AG2_0009.mp4 */,
 				038D004A18D5C096007E32EC /* AG2_0010.mp4 */,
 				038D004B18D5C096007E32EC /* AG2_0011.mp4 */,
-				032923EF18D465A4006BEE51 /* AG2_0001.mp4 */,
-				032923F018D465A4006BEE51 /* AG2_0002.mp4 */,
-				032923F118D465A4006BEE51 /* AG2_0003.mp4 */,
-				032923F218D465A4006BEE51 /* AG2_0004.mp4 */,
-				032923F318D465A4006BEE51 /* AG2_0005.mp4 */,
-				032923F418D465A4006BEE51 /* AG2_0006.mp4 */,
-				032923F518D465A4006BEE51 /* AG2_0007.mp4 */,
-				032923F618D465A4006BEE51 /* AG2_0008.mp4 */,
-				032923F718D465A4006BEE51 /* AG2_0009.mp4 */,
-				032923F818D465A4006BEE51 /* AG2_0010.mp4 */,
-				032923F918D465A4006BEE51 /* AG2_0011.mp4 */,
 			);
 			name = Escena_02;
 			sourceTree = "<group>";
@@ -502,18 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0323742C18D4B9B6008EC070 /* AG2_0001.mp4 in Resources */,
-				0323742D18D4B9B6008EC070 /* AG2_0002.mp4 in Resources */,
-				0323742E18D4B9B6008EC070 /* AG2_0003.mp4 in Resources */,
-				0323742F18D4B9B6008EC070 /* AG2_0004.mp4 in Resources */,
-				0323743018D4B9B6008EC070 /* AG2_0005.mp4 in Resources */,
-				0323743118D4B9B6008EC070 /* AG2_0006.mp4 in Resources */,
-				0323743218D4B9B6008EC070 /* AG2_0007.mp4 in Resources */,
-				0323743318D4B9B6008EC070 /* AG2_0008.mp4 in Resources */,
 				0323743818D5999F008EC070 /* Scene1.xml in Resources */,
-				0323743418D4B9B6008EC070 /* AG2_0009.mp4 in Resources */,
-				0323743518D4B9B6008EC070 /* AG2_0010.mp4 in Resources */,
-				0323743618D4B9B6008EC070 /* AG2_0011.mp4 in Resources */,
 				03DAA8BC18BD14A100A2A19A /* Laffayette_Comic_Pro.ttf in Resources */,
 				03722BFE18AACEBA00B2EEBC /* AG_0001.mp4 in Resources */,
 				03722BFF18AACEBA00B2EEBC /* AG_0002.mp4 in Resources */,

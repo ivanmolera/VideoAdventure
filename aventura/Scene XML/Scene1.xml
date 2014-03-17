@@ -83,6 +83,14 @@
         <Action id="8" type="jumpToState" target="8">
             <TouchMask id="4"/>
         </Action>
+        
+        <Action id="9" type="jumpToState" target="9">
+            <TouchMask id="3"/>
+        </Action>
+        
+        <Action id="10" type="jumpToState" target="10">
+            <TouchMask id="5"/>
+        </Action>
     </Actions>
     
     
@@ -109,6 +117,7 @@
         
         <Estat id="4" videoURL="AG2_0008">
 			<Action id="5"/>
+            <Action id="9"/>
 		</Estat>
 
         <Estat id="5" videoURL="AG2_0011">
@@ -129,6 +138,15 @@
             <Action id="1"/>
             <Action id="3"/>
             <Action id="6"/>
+        </Estat>
+        
+        <Estat id="9" videoURL="AG2_0009">
+            <Action id="10"/>
+        </Estat>
+        
+        <Estat id="10" videoURL="AG2_0010">
+			<Action id="5"/>
+            <Action id="9"/>
         </Estat>
 	</Estats>
     
