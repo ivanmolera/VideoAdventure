@@ -134,6 +134,11 @@
         <Action id="10" type="getItem" target="1" message="txt_getItem_0001">
             <TouchMask id="5"/>
         </Action>
+        
+        <Action id="11" type="jumpToScene" target="1">
+            <TouchMask id="4"/>
+        </Action>
+
     </Actions>
     
     
@@ -143,6 +148,7 @@
             <Action id="2"/>
             <Action id="9"/>
             <Action id="10"/>
+            <Action id="11"/>
         </Estat>
         
 		<Estat id="1" videoURL="AG_0002">

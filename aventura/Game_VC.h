@@ -49,5 +49,9 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UIView*    m_ViewEscena;
 
 
-
+/*
+ <Action id="9" type="showMessage" message="txt_msg_0001">
+ <TouchMask id="4"/>
+ </Action>
+*/
 @end

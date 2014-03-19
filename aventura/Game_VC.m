@@ -416,7 +416,7 @@
     NSLog(@"----------------------------------");
     
     [self setM_aEscenes:escenes];
-    self.m_iCurrentEscena = 1;
+    self.m_iCurrentEscena = 0;
 }
 
 - (void) loadInventoryXML
