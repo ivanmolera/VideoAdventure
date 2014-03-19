@@ -53,7 +53,8 @@
             
         case ActionTypeJumpToScene:
         {
-            // TODO:
+            NSNumber *num = [NSNumber numberWithInt:self.target];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangeEscena" object:num];
         }
             
             break;

@@ -36,7 +36,8 @@
     [self loadInventoryXML];
     //[self loadXML:@""];
 
-    [self.view addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
+    
+    [self.m_ViewEscena addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
 
     //Botó Back:
     _btn_Back = [[UIButton alloc] initWithFrame:CGRectMake(20,25,100,50)];
@@ -56,6 +57,48 @@
     [self.view addSubview:self.inventory];
     [self.view bringSubviewToFront:self.inventory];
 }
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(notificationCallback:)
+												 name:nil
+											   object:nil ];
+}
+
+- (void)viewDidDisappear:(BOOL)animated;
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:nil
+                                                  object:nil];
+    
+    [super viewDidDisappear:animated];
+}
+
+- (void) notificationCallback:(NSNotification *) notification
+{
+    if ([[notification name] isEqualToString:@"ChangeEscena"])
+    {
+        //1. Primer treiem l'escena actual de la subview
+        Escena* oldScene =_m_aEscenes[_m_iCurrentEscena];
+        [oldScene removeFromSuperview];
+        
+        //2. iniciem la nova escena
+        NSNumber* number = [notification object];
+        int escenaID = [number intValue];
+        _m_iCurrentEscena = escenaID;
+        Escena* newScene =_m_aEscenes[_m_iCurrentEscena];
+        
+        newScene.m_iCurrentEstat = 0;
+        [newScene setCurrentEstat:[newScene.m_aEstats objectAtIndex:newScene.m_iCurrentEstat]];
+         
+        //3. finalment afegim la nova escena a la subvista
+        [self.m_ViewEscena addSubview:newScene];
+    }
+}
+
 
 - (void) showHideMasks {
     Escena *currentEscena = self.m_aEscenes[self.m_iCurrentEscena];

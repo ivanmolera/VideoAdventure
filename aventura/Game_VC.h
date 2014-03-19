@@ -46,6 +46,7 @@ typedef enum {
 // Inventari
 @property (nonatomic, strong) Inventory         *inventory;
 
+@property (weak, nonatomic) IBOutlet UIView*    m_ViewEscena;
 
 
 
