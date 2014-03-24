@@ -86,7 +86,7 @@
             
             newItem.button.center = centerOfPath;
             
-            [self.escena showItem:newItem.button];
+            [self.escena showItem:newItem];
         }
             break;
             

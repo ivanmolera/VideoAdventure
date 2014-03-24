@@ -13,4 +13,10 @@
 "item2" = "Copa";
 "item3" = "Botella de vino";
 
-"txt_getItem_0001" = "¿Quieres coger la flor roja?";
+
+"txt_getItem_item1" = "¿Quieres coger la flor roja?";
+"txt_getItem_item2" = "¿Quieres coger la copa?";
+"txt_getItem_item3" = "¿Quieres coger la Botella de vino?";
+
+"NO"    = "NO";
+"YES"   = "SÍ";

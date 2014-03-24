@@ -124,12 +124,13 @@
     [self addSubview:messageLabel];
 }
 
-- (void) showItem:(UIButton*)button {
+- (void) showItem:(Item*)_item
+{
     [self bringSubviewToFront:m_ItemMenu];
     [m_ItemMenu showMenu];
-    
-    //[self addSubview:button];
-    //[self bringSubviewToFront:button];
+    [m_ItemMenu setPosition:_item.button.center];
+    [m_ItemMenu setIdentifier:_item.identifier];
+    _m_ItemSelected = _item;
 }
 
 @end

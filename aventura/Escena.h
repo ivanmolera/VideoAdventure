@@ -14,36 +14,29 @@
 #import "ItemMenu_View.h"
 //------------------
 
+@class Item;
+
 @interface Escena : UIView
 {
-    ItemMenu_View* m_ItemMenu;    
+    ItemMenu_View*  m_ItemMenu;
 }
 
-// Identificador de l'escena
-@property (nonatomic, strong) NSString                  *identifier;
+//---Properties:
+@property (nonatomic, strong) NSString*         identifier;         // Identificador de l'escena
+@property (nonatomic, strong) NSMutableArray*   m_aTouchMasks;      // Array de màscares
+@property (nonatomic, strong) NSMutableArray*   m_aActions;         // Array d'accions
+@property (nonatomic, strong) NSMutableArray*   m_aEstats;          // Array d'estats
+@property (nonatomic, strong) AVPlayer*         moviePlayer;        // Player
+@property (nonatomic, strong) AVPlayerLayer*    movieLayer;         // Player
+@property (nonatomic, assign) int               m_iCurrentEstat;    // Estat actual
+@property (nonatomic, strong) Item*             m_ItemSelected;
 
-// Array de màscares
-@property (nonatomic, strong) NSMutableArray            *m_aTouchMasks;
-
-// Array d'accions
-@property (nonatomic, strong) NSMutableArray            *m_aActions;
-
-// Array d'estats
-@property (nonatomic, strong) NSMutableArray            *m_aEstats;
-
-// Player
-@property (nonatomic, strong) AVPlayer                  *moviePlayer;
-@property (nonatomic, strong) AVPlayerLayer             *movieLayer;
-
-// Estat actual
-@property (nonatomic, assign) int                       m_iCurrentEstat;
-
-- (id) initWithIdentifier:(NSString *)identifier andFrame:(CGRect)frame;
+//---Functions:
+- (id)  initWithIdentifier:(NSString *)identifier andFrame:(CGRect)frame;
 - (void) setCurrentEstat:(Estat*)estat;
 - (void) setMasks:(NSMutableArray *)bezierPaths;
-
 - (void) removeLabelsFromEscena;
 - (void) showMessage:(NSString*)localizedString;
-- (void) showItem:(UIButton*)button;
+- (void) showItem:(Item*)_item;
 
 @end

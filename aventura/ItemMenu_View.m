@@ -26,10 +26,13 @@
         [self.img_Item.layer setMasksToBounds:YES];
         
         UIFont *fontComic_20 = [UIFont fontWithName: @"Laffayette Comic Pro" size: 20.0f];
-        UIFont *fontComic_24 = [UIFont fontWithName: @"Laffayette Comic Pro" size: 24.0f];
         [self.lbl_Pregunta setFont:fontComic_20];
-        self.btn_No.titleLabel.font = fontComic_24;
-        self.btn_Si.titleLabel.font = fontComic_24;
+        
+        //UIFont *fontComic_24 = [UIFont fontWithName: @"Laffayette Comic Pro" size: 24.0f];
+        //self.btn_No.titleLabel.font = fontComic_24;
+        //self.btn_Si.titleLabel.font = fontComic_24;
+        [self.btn_No setTitle:NSLocalizedString(@"NO",nil) forState:UIControlStateNormal];
+        [self.btn_Si setTitle:NSLocalizedString(@"YES",nil) forState:UIControlStateNormal];
     }
     return self;
 }
@@ -57,6 +60,24 @@
                                                         object:nil];
      [self hideMenu];
 }
+
+- (void) setIdentifier:(NSString *)_identifier
+{
+    UIImage *imatge = [UIImage imageNamed:[NSString stringWithFormat:@"item%@.png", _identifier]];
+    self.img_Item.image = imatge;
+    
+    NSString *txt = [NSString stringWithFormat:@"txt_getItem_item%@", _identifier];
+    self.lbl_Pregunta.text = NSLocalizedString(txt, nil);
+}
+
+- (void) setPosition:(CGPoint) _pos;
+{
+    CGRect frame = self.frame;
+    frame.origin.x = _pos.x - (frame.size.width*0.5);
+    frame.origin.y = _pos.y - (frame.size.height*0.5);
+    self.frame = frame;
+}
+
 
 
 - (void) showMenu

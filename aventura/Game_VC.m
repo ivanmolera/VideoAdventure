@@ -98,6 +98,13 @@
         //3. finalment afegim la nova escena a la subvista
         [self.m_ViewEscena addSubview:newScene];
     }
+    else if ([[notification name] isEqualToString:@"ITEM_MENU_YES_PRESSED"])
+    {
+        Escena* currentEscena = _m_aEscenes[_m_iCurrentEscena];
+        Item* item = currentEscena.m_ItemSelected;
+        [self.inventory addItem:item];
+        [self.inventory ordenaItems];
+    }
 }
 
 

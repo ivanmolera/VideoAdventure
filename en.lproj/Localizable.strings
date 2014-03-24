@@ -13,4 +13,9 @@
 "item2" = "Glass";
 "item3" = "Bottle of wine";
 
-"txt_getItem_0001" = "Do you want to get the red flower?";
+"txt_getItem_item1" = "Do you want to get the red flower?";
+"txt_getItem_item2" = "Do you want to get the Glass?";
+"txt_getItem_item3" = "Do you want to get the Bottle of wine?";
+
+"NO"    = "NO";
+"YES"   = "YES";

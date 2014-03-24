@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ItemMenu_View.h"
 
+
 @interface ItemMenu_View : UIView
 {
-    
 }
 
 //---IBOutlets:
@@ -25,6 +25,8 @@
 - (IBAction)no_Pressed:(id)sender;
 
 //---Functions:
+- (void) setIdentifier:(NSString*) _identifier;
+- (void) setPosition:(CGPoint) _pos;
 - (void) hideMenu;
 - (void) showMenu;
 @end
