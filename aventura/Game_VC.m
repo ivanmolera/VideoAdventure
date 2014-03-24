@@ -34,7 +34,6 @@
     [self.inventory setEscena:self.m_aEscenes[self.m_iCurrentEscena]];
     
     [self loadInventoryXML];
-    //[self loadXML:@""];
 
     
     [self.m_ViewEscena addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
@@ -56,6 +55,8 @@
 
     [self.view addSubview:self.inventory];
     [self.view bringSubviewToFront:self.inventory];
+    
+
 }
 
 - (void) viewWillAppear:(BOOL)animated

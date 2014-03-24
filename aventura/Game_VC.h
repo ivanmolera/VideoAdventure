@@ -9,6 +9,7 @@
 //---Imports:----------------
 #import <UIKit/UIKit.h>
 #import "Inventory.h"
+
 //---------------------------
 
 
@@ -23,35 +24,25 @@ typedef enum {
 
 @interface Game_VC : UIViewController <UIGestureRecognizerDelegate>
 {
-    
 }
 
-//----Properties:
 
-@property (nonatomic, strong) UIButton          *btn_Back;
-
-// Show/Hide layers
-@property (nonatomic, strong) UISwitch          *switchBtn;
-
-// Touch points
-@property (nonatomic, strong) NSMutableArray    *beginTouchPoints;
-@property (nonatomic, strong) NSMutableArray    *endTouchPoints;
-
-// Array d'escenes
-@property (nonatomic, strong) NSMutableArray    *m_aEscenes;
-
-// Escena actual
-@property (nonatomic, assign) int               m_iCurrentEscena;
-
-// Inventari
-@property (nonatomic, strong) Inventory         *inventory;
-
+//---IBOutlets:
 @property (weak, nonatomic) IBOutlet UIView*    m_ViewEscena;
 
 
-/*
- <Action id="9" type="showMessage" message="txt_msg_0001">
- <TouchMask id="4"/>
- </Action>
-*/
+//----Properties:
+@property (nonatomic, strong) UIButton*         btn_Back;
+@property (nonatomic, strong) UISwitch*         switchBtn;          // Show/Hide layers
+@property (nonatomic, strong) NSMutableArray*   beginTouchPoints;   // Show/Hide layers
+@property (nonatomic, strong) NSMutableArray*   endTouchPoints;     // Show/Hide layers
+@property (nonatomic, strong) NSMutableArray*   m_aEscenes;         // Array d'escenes
+@property (nonatomic, assign) int               m_iCurrentEscena;   // Escena actual
+@property (nonatomic, strong) Inventory*        inventory;          // Inventari
+
+//---IBActions:
+//...
+
+//---Functions:
+//...
 @end

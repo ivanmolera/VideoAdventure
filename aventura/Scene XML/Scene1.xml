@@ -11,7 +11,7 @@
                 <Coord step="5" posX="0.532227" posY="0.593750"/>
                 <Coord step="6" posX="0.462891" posY="0.578125"/>
                 <Coord step="7" posX="0.462891" posY="0.578125"/>
-            </Coords>
+            </Coords> 
         </TouchMask>
         <TouchMask id="2">
             <Coords>

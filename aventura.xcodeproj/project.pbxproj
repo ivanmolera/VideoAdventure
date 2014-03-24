@@ -64,6 +64,8 @@
 		C786A0DA18DA30000071953B /* AG2_0011.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C786A0CF18DA30000071953B /* AG2_0011.mp4 */; };
 		C7A8CBDC18C883D30048E337 /* EditorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8CBDB18C883D30048E337 /* EditorCell.m */; };
 		C7A8CBE018CA58140048E337 /* Invetory.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7A8CBDF18CA58140048E337 /* Invetory.xml */; };
+		C7D679D718DCD6A100D35F34 /* ItemMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D679D618DCD6A100D35F34 /* ItemMenu.xib */; };
+		C7D679DA18DCD7E500D35F34 /* ItemMenu_View.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D679D918DCD7E500D35F34 /* ItemMenu_View.m */; };
 		C7F6088018C4F60500E03078 /* Scene0.xml in Resources */ = {isa = PBXBuildFile; fileRef = C7F6087F18C4F60500E03078 /* Scene0.xml */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +155,9 @@
 		C7A8CBDA18C883D30048E337 /* EditorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorCell.h; path = aventura/EditorCell.h; sourceTree = SOURCE_ROOT; };
 		C7A8CBDB18C883D30048E337 /* EditorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditorCell.m; path = aventura/EditorCell.m; sourceTree = SOURCE_ROOT; };
 		C7A8CBDF18CA58140048E337 /* Invetory.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Invetory.xml; path = "aventura/Scene XML/Invetory.xml"; sourceTree = SOURCE_ROOT; };
+		C7D679D618DCD6A100D35F34 /* ItemMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemMenu.xib; path = aventura/ItemMenu.xib; sourceTree = SOURCE_ROOT; };
+		C7D679D818DCD7E500D35F34 /* ItemMenu_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemMenu_View.h; path = aventura/ItemMenu_View.h; sourceTree = SOURCE_ROOT; };
+		C7D679D918DCD7E500D35F34 /* ItemMenu_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemMenu_View.m; path = aventura/ItemMenu_View.m; sourceTree = SOURCE_ROOT; };
 		C7F6087F18C4F60500E03078 /* Scene0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Scene0.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -329,6 +334,9 @@
 				C73BC12718C499FF00C46E86 /* EditorTouchMask_VC.m */,
 				C7A8CBDA18C883D30048E337 /* EditorCell.h */,
 				C7A8CBDB18C883D30048E337 /* EditorCell.m */,
+				C7D679D618DCD6A100D35F34 /* ItemMenu.xib */,
+				C7D679D818DCD7E500D35F34 /* ItemMenu_View.h */,
+				C7D679D918DCD7E500D35F34 /* ItemMenu_View.m */,
 			);
 			name = "01. View Controllers";
 			sourceTree = "<group>";
@@ -509,6 +517,7 @@
 				C786A0D318DA30000071953B /* AG2_0004.mp4 in Resources */,
 				03722BD518AAC73300B2EEBC /* Images.xcassets in Resources */,
 				C786A0D118DA30000071953B /* AG2_0002.mp4 in Resources */,
+				C7D679D718DCD6A100D35F34 /* ItemMenu.xib in Resources */,
 				03722BC718AAC73300B2EEBC /* InfoPlist.strings in Resources */,
 				C75AA6AC18C65D3F00FCFC93 /* 5-map-crosshair@2x.png in Resources */,
 				C786A0D418DA30000071953B /* AG2_0005.mp4 in Resources */,
@@ -537,6 +546,7 @@
 				037E8D9F18AC8A3E0009DAB5 /* TouchMask.m in Sources */,
 				03722BF518AAC78500B2EEBC /* Escena.m in Sources */,
 				03E3CF3E18BA0F7000B9D789 /* Estat.m in Sources */,
+				C7D679DA18DCD7E500D35F34 /* ItemMenu_View.m in Sources */,
 				0348ECB218C7A62C00C69934 /* Inventory.m in Sources */,
 				037E8DA218AD7FB00009DAB5 /* Action.m in Sources */,
 				C73BC12818C499FF00C46E86 /* EditorTouchMask_VC.m in Sources */,

@@ -29,6 +29,12 @@
         [_movieLayer setBackgroundColor:[UIColor blackColor].CGColor];
         
         [self.layer addSublayer:_movieLayer];
+        
+        //---Menu Item:
+        CGRect rect = CGRectMake(80, 100, 350, 250);
+        m_ItemMenu = [[ItemMenu_View alloc] initWithFrame:rect];
+        [self addSubview:m_ItemMenu];
+        [m_ItemMenu hideMenu];
     }
     return self;
 }
@@ -119,8 +125,11 @@
 }
 
 - (void) showItem:(UIButton*)button {
-    [self addSubview:button];
-    [self bringSubviewToFront:button];
+    [self bringSubviewToFront:m_ItemMenu];
+    [m_ItemMenu showMenu];
+    
+    //[self addSubview:button];
+    //[self bringSubviewToFront:button];
 }
 
 @end

@@ -11,9 +11,13 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import "Estat.h"
+#import "ItemMenu_View.h"
 //------------------
 
 @interface Escena : UIView
+{
+    ItemMenu_View* m_ItemMenu;    
+}
 
 // Identificador de l'escena
 @property (nonatomic, strong) NSString                  *identifier;

@@ -12,13 +12,15 @@
 @class Inventory;
 
 @interface Item : NSObject
+{}
 
-@property (nonatomic, strong) NSString          *identifier;
-@property (nonatomic, strong) UIButton          *button;
-@property (nonatomic, strong) NSString          *description;
+//---Properties:
+@property (nonatomic, strong) NSString* identifier;
+@property (nonatomic, strong) UIButton* button;
+@property (nonatomic, strong) NSString* description;
+@property (nonatomic, strong) Escena*   escena;
 
-@property (nonatomic, strong) Escena            *escena;
-
+//---Funtions:
 - (id) initWithIdentifier:(NSString *)identifier;
 - (void)withInventory:(Inventory *)inventari;
 
