@@ -28,14 +28,13 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     [self loadAllXML];
-    
+
     // Inventari
     self.inventory = [[Inventory alloc] initWithFrame:self.view.frame];
     [self.inventory setEscena:self.m_aEscenes[self.m_iCurrentEscena]];
-    
+
     [self loadInventoryXML];
 
-    
     [self.m_ViewEscena addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
 
     //Botó Back:
@@ -46,7 +45,7 @@
     [self.view addSubview:_btn_Back];
     
     // Botó show/hide masks
-    self.switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(self.view.frame.size.height-80, 35, 100, 40)];
+    self.switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(self.view.frame.size.width-80, 35, 100, 40)];
     [self.switchBtn setOn:NO];
     [self.switchBtn addTarget:self
                        action:@selector(showHideMasks)
@@ -223,14 +222,9 @@
             //<Escena id="0">
             if (escenaTN.Exists())
             {
-                CGRect frame = CGRectMake(0,
-                                          0,
-                                          self.view.frame.size.height,
-                                          self.view.frame.size.width);
-                
                 const char* _escenaID   = escenaTN.GetPszProperty("id");
                 NSString* escenaID      = [NSString stringWithUTF8String:_escenaID];
-                Escena *escena = [[Escena alloc] initWithIdentifier:escenaID andFrame:frame];
+                Escena *escena = [[Escena alloc] initWithIdentifier:escenaID andFrame:self.view.frame];
                 
                 CXMLTreeNode  touchMasksTN = xmlTN["TouchMasks"];
                 NSMutableArray *masks = [[NSMutableArray alloc] init];
@@ -260,14 +254,15 @@
                                 posX_precent = coordTN.GetFloatProperty("posX");
                                 posY_precent = coordTN.GetFloatProperty("posY");
 
-                                float posX = (float)(posX_precent * self.view.frame.size.height);
-                                float posY = (float)(posY_precent * self.view.frame.size.width);
+                                float posX = (float)(posX_precent * self.view.frame.size.width);
+                                float posY = (float)(posY_precent * self.view.frame.size.height);
 
                                 [coords addObject:[NSValue valueWithCGPoint:CGPointMake(posX, posY)]];
                             }
                             [masks addObject:[[TouchMask alloc ] initWithCoords:coords
                                                                        andFrame:self.view.frame
-                                                                  andIdentifier:touchMaskID andIsHidden:YES]];
+                                                                  andIdentifier:touchMaskID
+                                                                    andIsHidden:YES]];
                         }
                     }
                     

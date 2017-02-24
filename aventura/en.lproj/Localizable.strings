@@ -1,10 +1,10 @@
-/* 
-  Localizable.strings
-  aventura
-
-  Created by IVAN MOLERA on 25/02/14.
-  Copyright (c) 2014 owlab. All rights reserved.
-*/
+/*
+ Localizable.strings
+ aventura
+ 
+ Created by IVAN MOLERA on 25/02/14.
+ Copyright (c) 2014 owlab. All rights reserved.
+ */
 
 "txt_msg_0001" = "Hello...";
 "txt_msg_0002" = "English. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, erat at mollis tempus, arcu lectus ultrices enim, id scelerisque elit justo vel ligula.";

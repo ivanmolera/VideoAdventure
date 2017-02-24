@@ -21,7 +21,7 @@
 
         _initFrame = frame;
 
-        [self setFrame:CGRectMake(0, _initFrame.size.width-95, _initFrame.size.height, 95)];
+        [self setFrame:CGRectMake(0, _initFrame.size.height-95, _initFrame.size.width, 95)];
 
         self.scrollEnabled = YES;
         self.clipsToBounds = NO;

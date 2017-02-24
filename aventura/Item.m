@@ -15,6 +15,8 @@
     Inventory* _inventari;
 }
 
+@synthesize description;
+
 - (void)withInventory:(Inventory *)inventari
 {
     _inventari = inventari;
