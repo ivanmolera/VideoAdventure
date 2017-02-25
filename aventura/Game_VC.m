@@ -33,7 +33,9 @@
     self.inventory = [[Inventory alloc] initWithFrame:self.view.frame];
     [self.inventory setEscena:self.m_aEscenes[self.m_iCurrentEscena]];
 
-    [self loadInventoryXML];
+    if(self.m_iCurrentEscena == 0) {
+        [self loadInventoryXML];
+    }
 
     [self.m_ViewEscena addSubview:self.m_aEscenes[self.m_iCurrentEscena]];
 
@@ -419,7 +421,6 @@
     NSLog(@"----------------------------------");
     
     [self setM_aEscenes:escenes];
-    self.m_iCurrentEscena = 0;
 }
 
 - (void) loadInventoryXML
@@ -469,4 +470,5 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 @end
